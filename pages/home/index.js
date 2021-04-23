@@ -15,6 +15,9 @@ export default function Home({homeData}){
         <Head>
         <title>Lifestyle News: Latest Lifestyle</title>
       </Head>
+
+<h1>Home page working but api is not working when deployed...</h1>
+
             {/* Add Section */}
          <div className="add_wrapper">
                     <img src={add_img} alt="add" />
