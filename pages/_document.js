@@ -11,6 +11,7 @@ class MyDocument extends Document {
 <Html>
 <Head>
 <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 <meta charset="UTF-8" />
 <meta name="robots" content="noindex,nofollow" />
 <meta name="description" content="Harperbazar" />
