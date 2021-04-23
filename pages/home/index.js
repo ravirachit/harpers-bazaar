@@ -44,7 +44,7 @@ export default function Home({homeData}){
 // }
 
 Home.getInitialProps = async()=>{
-    const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home`)
+    const res = await fetch(`https://reqres.in/api/users`)
     const homeData = await res.json()
     return {homeData:homeData};
 }
