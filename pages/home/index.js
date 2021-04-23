@@ -263,18 +263,18 @@ export default function Home({homeData}){
     )
 }
 
-// export async function getStaticProps(){
-//     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home`)
-//     const homeData = await res.json()
-//     return {
-//         props: { homeData, },
-//       };
-// }
-
-export async function getServerSideProps(){
+export async function getStaticProps(){
     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home`)
     const homeData = await res.json()
     return {
         props: { homeData, },
       };
 }
+
+// export async function getServerSideProps(){
+//     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home`)
+//     const homeData = await res.json()
+//     return {
+//         props: { homeData, },
+//       };
+// }
