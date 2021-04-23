@@ -13,6 +13,7 @@ export default function Home({homeData}){
        <>
         <Head>
         <title>Lifestyle News: Latest Lifestyle</title>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       </Head>
 
 <h1>Home page working but api is not working when deployed...</h1>
