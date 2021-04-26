@@ -13,7 +13,7 @@ export default function Home({homeData}){
     // console.log("homeData- ", homeData);
     return(
        <>
-       <div id="div-gpt-ad-6326067-1">
+       <div id="div-gpt-ad-6326067-1" targeting="true">
         <Ad path="/1007232/HarperBazaar_HP_300x250-728x90_ATF" />
       </div>
         <Head>
@@ -30,7 +30,7 @@ export default function Home({homeData}){
 
         <h1>Home page is working</h1>
 
-        <div id="div-gpt-ad-6326067-2">
+        <div id="div-gpt-ad-6326067-2" targeting="true">
         <Ad path="/1007232/HarperBazaar_HP_300x250_MTF" />
       </div>
            
