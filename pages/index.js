@@ -24,6 +24,10 @@ export default function Home({homeData}){
          <div className="add_wrapper">
                     <img src={add_img} alt="add" />
         </div>
+
+        <div id="div-gpt-ad-6326067-2">
+        <Ad path="/1007232/HarperBazaar_HP_300x250_MTF" />
+      </div>
         {/* <div>{homeData}</div> */}
 
         <h1>Home page is working</h1>
