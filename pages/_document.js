@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
 <Html>
 <Head>
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+{/* <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script> */}
 <meta name="viewport" content="width=device-width, intial-scale=1.0" />
 {/* <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> */}
 <meta charset="UTF-8" />
