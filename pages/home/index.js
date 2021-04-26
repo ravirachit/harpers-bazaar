@@ -37,7 +37,7 @@ export default function Home({homeData}){
 
 export async function getServerSideProps(){
     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home`,function (req, res) {
-        res.header("Access-Control-Allow-Origin", "true")})
+        res.header("Access-Control-Allow-Origin", "http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home")})
     const homeData = await res.json()
     return {
         props: { homeData, },
