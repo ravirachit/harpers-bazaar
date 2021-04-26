@@ -1,7 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 
-import Ad from 'react-google-publisher-tag';
+// import Ad from 'react-google-publisher-tag';
+import {Bling as GPT} from "react-gpt";
+
+GPT.enableSingleRequest();
 // Images
 // const banner_img = './assets/images/banner.png';
 const add_img = './assets/images/add.png';
@@ -13,9 +16,21 @@ export default function Home({homeData}){
     // console.log("homeData- ", homeData);
     return(
        <>
-       <div id="div-gpt-ad-6326067-1" targeting="true">
+       <div id="div-gpt-ad-6326067-1">
+                <GPT
+                    adUnitPath="/1007232/HarperBazaar_HP_300x250-728x90_ATF"
+                    slotSize={[728, 90]}
+                />
+            </div>
+            <div id="div-gpt-ad-6326067-2">
+                <GPT
+                    adUnitPath="/1007232/HarperBazaar_HP_300x250_MTF"
+                    slotSize={[300, 250]}
+                />
+            </div>
+       {/* <div id="div-gpt-ad-6326067-1">
         <Ad path="/1007232/HarperBazaar_HP_300x250-728x90_ATF" />
-      </div>
+      </div> */}
         <Head>
         <title>Lifestyle News: Latest Lifestyle</title>
         {/* <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script> */}
@@ -30,9 +45,9 @@ export default function Home({homeData}){
 
         <h1>Home page is working</h1>
 
-        <div id="div-gpt-ad-6326067-2" targeting="true">
+        {/* <div id="div-gpt-ad-6326067-2">
         <Ad path="/1007232/HarperBazaar_HP_300x250_MTF" />
-      </div>
+      </div> */}
            
             </>
     )
