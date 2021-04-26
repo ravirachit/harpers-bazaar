@@ -4,7 +4,7 @@ import Head from 'next/head';
 // import Ad from 'react-google-publisher-tag';
 import {Bling as GPT} from "react-gpt";
 
-GPT.enableSingleRequest();
+// GPT.enableSingleRequest();
 // Images
 // const banner_img = './assets/images/banner.png';
 const add_img = './assets/images/add.png';
