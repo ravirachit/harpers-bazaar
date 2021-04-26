@@ -10,10 +10,6 @@ class MyDocument extends Document {
     return (
 <Html>
 <Head>
-{/* <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script> */}
-<meta name="viewport" content="width=device-width, intial-scale=1.0" />
-{/* <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> */}
-<meta charset="UTF-8" />
 <link rel="icon" href="https://akm-img-a-in.tosshub.com/sites/harpers-bazaar/resources/images/favicon.ico" type="image/x-icon" />
 <link rel="canonical" href="http://alpha-harperbazar.intoday.in/fashion" />
 </Head>

@@ -4,7 +4,7 @@ import Head from 'next/head';
 // import Ad from 'react-google-publisher-tag';
 import {Bling as GPT} from "react-gpt";
 
-// GPT.enableSingleRequest();
+GPT.enableSingleRequest();
 // Images
 // const banner_img = './assets/images/banner.png';
 const add_img = './assets/images/add.png';
@@ -43,7 +43,7 @@ export default function Home({homeData}){
         <div id="div-gpt-ad-6326067-3">
                 <GPT
                     adUnitPath="/1007232/HarperBazaar_HP_728x90-300x250_BTF"
-                    slotSize={[300, 250]}
+                    slotSize={[800, 450]}
                 />
             </div>
        
