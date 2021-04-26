@@ -9,6 +9,7 @@ const backArrowImg = './assets/images/backarrow.png';
 const add_img = './assets/images/add.png';
 
 export default function Fashion({fashionData}){
+    console.log("fashionData -", fashionData);
    return(
     <>
     <Head>
@@ -32,10 +33,10 @@ export default function Fashion({fashionData}){
 // }
 
 
-// export async function getServerSideProps(){
-//     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/latest?section=fashion&section_level=0content_type=all&page=1&limit=10&order_by=publish_up%20desc&app=all`)
-//     const fashionData = await res.json()
-//     return {
-//         props: { fashionData, },
-//       };
-// }
+export async function getServerSideProps(){
+    const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/latest?section=fashion&section_level=0content_type=all&page=1&limit=10&order_by=publish_up%20desc&app=all`)
+    const fashionData = await res.json()
+    return {
+        props: { fashionData, },
+      };
+}
