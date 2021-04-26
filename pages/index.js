@@ -22,12 +22,7 @@ export default function Home({homeData}){
                     slotSize={[728, 90]}
                 />
             </div>
-            <div id="div-gpt-ad-6326067-2">
-                <GPT
-                    adUnitPath="/1007232/HarperBazaar_HP_300x250_MTF"
-                    slotSize={[300, 250]}
-                />
-            </div>
+            
        {/* <div id="div-gpt-ad-6326067-1">
         <Ad path="/1007232/HarperBazaar_HP_300x250-728x90_ATF" />
       </div> */}
@@ -37,8 +32,21 @@ export default function Home({homeData}){
       </Head>
             {/* Add Section */}
          <div className="add_wrapper">
-                    <img src={add_img} alt="add" />
+         <div id="div-gpt-ad-6326067-2">
+                <GPT
+                    adUnitPath="/1007232/HarperBazaar_HP_300x250_MTF"
+                    slotSize={[300, 250]}
+                />
+            </div>
         </div>
+
+        <div id="div-gpt-ad-6326067-3">
+                <GPT
+                    adUnitPath="/1007232/HarperBazaar_HP_728x90-300x250_BTF"
+                    slotSize={[300, 250]}
+                />
+            </div>
+       
 
         
         {/* <div>{homeData}</div> */}
