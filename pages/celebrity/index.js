@@ -83,7 +83,15 @@ export default function Celebrity({celebrityData}){
    )
 }
 
-export async function getStaticProps(){
+// export async function getStaticProps(){
+//     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/latest?section=celebrity&section_level=0content_type=all&page=1&limit=10&order_by=publish_up%20desc&app=all`)
+//     const celebrityData = await res.json()
+//     return {
+//         props: { celebrityData, },
+//       };
+// }
+
+export async function getServerSideProps(){
     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/latest?section=celebrity&section_level=0content_type=all&page=1&limit=10&order_by=publish_up%20desc&app=all`)
     const celebrityData = await res.json()
     return {

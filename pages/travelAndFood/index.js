@@ -82,7 +82,15 @@ export default function TravelAndFood({travelAndFoodData}){
    )
 }
 
-export async function getStaticProps(){
+// export async function getStaticProps(){
+//     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/latest?section=travel-food&section_level=0content_type=all&page=1&limit=10&order_by=publish_up%20desc&app=all`)
+//     const travelAndFoodData = await res.json()
+//     return {
+//         props: { travelAndFoodData, },
+//       };
+// }
+
+export async function getServerSideProps(){
     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/latest?section=travel-food&section_level=0content_type=all&page=1&limit=10&order_by=publish_up%20desc&app=all`)
     const travelAndFoodData = await res.json()
     return {

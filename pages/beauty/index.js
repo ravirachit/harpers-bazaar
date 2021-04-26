@@ -82,7 +82,15 @@ export default function Beauty({beautyData}){
    )
 }
 
-export async function getStaticProps(){
+// export async function getStaticProps(){
+//     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/latest?section=beauty&section_level=0content_type=all&page=1&limit=10&order_by=publish_up%20desc&app=all`)
+//     const beautyData = await res.json()
+//     return {
+//         props: { beautyData, },
+//       };
+// }
+
+export async function getServerSideProps(){
     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/latest?section=beauty&section_level=0content_type=all&page=1&limit=10&order_by=publish_up%20desc&app=all`)
     const beautyData = await res.json()
     return {
