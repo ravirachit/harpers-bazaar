@@ -9,7 +9,7 @@ const backArrowImg = './assets/images/backarrow.png';
 const add_img = './assets/images/add.png';
 
 export default function Fashion({fashionData}){
-    console.log("fashionData -", fashionData);
+    console.log("fashionData res -", fashionData);
    return(
     <>
     <Head>
