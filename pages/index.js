@@ -1,64 +1,48 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from 'react';
+import Head from 'next/head';
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-       <Head>
+// Images
+// const banner_img = './assets/images/banner.png';
+const add_img = './assets/images/add.png';
+const FashionAdd = './assets/images/fashionadd.png';
+const cultureAdImg = './assets/images/300x250.png';
+
+export default function Home({homeData}){
+    console.log("homeData- ", homeData);
+    return(
+       <>
+        <Head>
         <title>Lifestyle News: Latest Lifestyle</title>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">the Harper's Bazaar world</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            {/* Add Section */}
+         <div className="add_wrapper">
+                    <img src={add_img} alt="add" />
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        {/* <div>{homeData}</div> */}
+           
+            </>
+    )
 }
+
+// export async function getStaticProps(){
+//     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home`)
+//     const homeData = await res.json()
+//     return {
+//         props: { homeData, },
+//       };
+// }
+
+export async function getServerSideProps(){
+    const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home`,function (req, res) {
+        res.header("Access-Control-Allow-Origin", "http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home")})
+    const homeData = await res.json()
+    return {
+        props: { homeData, },
+      };
+}
+
+// Home.getInitialProps = async()=>{
+//     const res = await fetch(`https://reqres.in/api/users`)
+//     const homeData = await res.json()
+//     return {homeData:homeData};
+// }

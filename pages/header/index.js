@@ -76,7 +76,7 @@ const router = useRouter();
                         <img src={strickyLogo} alt="stickyLogo" />
                     </a>
                     <nav className="menu">
-                        <Link href="/home"><a className={router.pathname === "/home" ? "activeNavMenu" : ""}>Home</a></Link>
+                        <Link href="/"><a className={router.pathname === "/" ? "activeNavMenu" : ""}>Home</a></Link>
                         <Link href="/fashion" ><a className={router.pathname === "/fashion" ? "activeNavMenu" : ""}>FASHION</a></Link>
                         <Link href="/beauty"><a className={router.pathname === "/beauty" ? "activeNavMenu" : ""}>BEAUTY</a></Link>
                         <Link href="/culture"><a className={router.pathname === "/culture" ? "activeNavMenu" : ""}>CULTURE</a></Link>
