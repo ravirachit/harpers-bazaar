@@ -70,7 +70,7 @@ export default function Home({homeData}){
 // }
 
 export async function getServerSideProps(){
-    const res = await fetch(`http://localhost:3000/api/jobs`)
+    const res = await fetch(`https://harpers-bazaar.vercel.app/api/jobs`)
     const homeData = await res.json()
     return {
         props: { homeData, },
