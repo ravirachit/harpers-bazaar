@@ -19,7 +19,7 @@ class myComponent extends React.Component {
       return(
           <>
           <Head>
-          <meta http-equiv="Content-Security-Policy-Report-Only" content="Content-Security-Policy-Report-Only" />
+          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
           </Head>
           <h1>my Component has Mounted, Check the browser 'console' </h1>;
           </>
