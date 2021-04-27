@@ -16,7 +16,14 @@ class myComponent extends React.Component {
         .then((data) => console.log('This is your data', data));
     }
     render() {
-      return <h1>my Component has Mounted, Check the browser 'console' </h1>;
+      return(
+          <>
+          <Head>
+          <meta http-equiv="Content-Security-Policy-Report-Only" content="Content-Security-Policy-Report-Only" />
+          </Head>
+          <h1>my Component has Mounted, Check the browser 'console' </h1>;
+          </>
+      )
     }
   }
   export default myComponent;
