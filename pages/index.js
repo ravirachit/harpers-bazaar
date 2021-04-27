@@ -13,7 +13,7 @@ const cultureAdImg = './assets/images/300x250.png';
 
 export default function Home({homeData}){
  
-    // console.log("homeData- ", homeData);
+    console.log("homeData- ", homeData);
     return(
        <>
        <div id="div-gpt-ad-6326067-1">
@@ -69,14 +69,13 @@ export default function Home({homeData}){
 //       };
 // }
 
-// export async function getServerSideProps(){
-//     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home`,function (req, res) {
-//         res.header("Access-Control-Allow-Origin", "http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home")})
-//     const homeData = await res.json()
-//     return {
-//         props: { homeData, },
-//       };
-// }
+export async function getServerSideProps(){
+    const res = await fetch(`http://localhost:3000/api/jobs`)
+    const homeData = await res.json()
+    return {
+        props: { homeData, },
+      };
+}
 
 // Home.getInitialProps = async()=>{
 //     const res = await fetch(`https://reqres.in/api/users`)
