@@ -2,7 +2,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-
 import {Bling as GPT} from "react-gpt";
 
 GPT.enableSingleRequest();
@@ -288,17 +287,17 @@ export default function Home({homeData}){
 }
 
 export async function getStaticProps(){
-    const res = await fetch(`https://harpers-bazaar.vercel.app/api/jobs`)
-    const homeData = await res.json()
+    const res = await fetch(`https://harpers-bazaar-1vfd7s0r6-ravirachit.vercel.app/api/jobs`);
+    const homeData = await res.json();
     return {
-        props: { homeData, },
-      };
+        props: { homeData },
+      }
 }
 
 // export async function getServerSideProps(){
 //     const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/template?name=home`)
-//     const homeData = await res.json()
+//     const homeData = await res.json();
 //     return {
-//         props: { homeData, },
-//       };
+//         props: { homeData },
+//       }
 // }
