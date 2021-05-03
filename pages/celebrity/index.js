@@ -28,9 +28,9 @@ export default function Celebrity({celebrityData}){
     </div>
 
     {/* Navigation */}
-    <div class="nevigation_section">
-            <div class="container">
-                <a href="www.facebook.com" class="active">Home  </a>
+    <div className="nevigation_section">
+            <div className="container">
+                <a href="www.facebook.com" className="active">Home  </a>
                 <span> <img src={backArrowImg} alt="back" /></span>
                 <a href="www.facebook.com">{celebrityData.data.feed[0].primary_section_name}</a>
             </div>
@@ -39,22 +39,22 @@ export default function Celebrity({celebrityData}){
          {/* Heading */}
          <h1 className="tittle_text"><span>{celebrityData.data.feed[0].primary_section_name}</span></h1>
 
-         <section class="content_wrapper">
-                <div class="container">
-                    <div class="content_inner">
-                        <div class="content_left">
+         <section className="content_wrapper">
+                <div className="container">
+                    <div className="content_inner">
+                        <div className="content_left">
             
                         {/* celebrity */}     
-                        <div class="fashion_top">
+                        <div className="fashion_top">
                             <figure>
                             <img src={celebrityData.data.feed[0].feature_image_data.url} alt="celebrity_img_main" />
                             </figure>
                             <h3>{celebrityData.data.feed[0].headline}</h3>
                         </div> 
                         </div>	                                  	
-            <div class="content_right">
+            <div className="content_right">
                 {/* Small ADS */}
-            <figure class="add_box">
+            <figure className="add_box">
             <div id="div-gpt-ad-6326067-2">
                                 <GPT
                                     adUnitPath="/1007232/HarperBazaar_HP_300x250_MTF"
@@ -65,24 +65,24 @@ export default function Celebrity({celebrityData}){
 
             {/* rhs story */}
             <h4>Must Read</h4>
-            <div class="right_card">
+            <div className="right_card">
                 <figure><img src={celebrityData.data.feed[1].feature_image_data.url} alt="rhs_img" /></figure>
                 <p>{celebrityData.data.feed[1].headline}</p>
             </div>
 			</div>
             </div>
-            <ul class="section_list">
+            <ul className="section_list">
             {
                 celebrityData.data.feed.slice(2).map((celebrity)=>{
                     return(
                         <li>
-                        <div class="list_detail">
+                        <div className="list_detail">
                             <strong>{moment(celebrity.updated_at).format("MMM DD, YYYY")}</strong>
                             <h3><a href={celebrity.url}>{celebrity.headline}</a></h3>
                             <p>{celebrity.introtext}</p>
                             <span>By <a href="/authors/bazaar-india">{celebrity.author_data[0].author_name}</a></span>
                         </div>
-                        <figure class="list_pic">
+                        <figure className="list_pic">
                             <img src={celebrity.feature_image_data.url} alt="list_img1"/>
                         </figure>
                     </li> 

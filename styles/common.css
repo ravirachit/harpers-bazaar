@@ -1,5 +1,6 @@
 
 /* Ad component stylesheet */
+
 .add_wrapper {
     height: 90px;
     background-color: #fff;
@@ -7,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 36px;
+    margin: 10px 0 44px;
 }
 @media only screen and (max-width:767px){
     .add_wrapper {
@@ -223,15 +224,7 @@
 
 
 /* Add Section */
-.add_wrapper {
-    height: 90px;
-    background-color: #fff;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 36px;
-}
+
 @media only screen and (max-width:767px){
     .add_wrapper {
     height: 250px;
