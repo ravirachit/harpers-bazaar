@@ -1,41 +1,4 @@
 
-/* Heading Title */
-.tittle_text {
-    font-family: Georgia;
-    font-style: italic;
-    color: #000;
-    font-size: 72px;
-    font-weight: 400;
-    text-transform: uppercase;
-    position: relative;
-    margin: 0 0 22px;
-    padding-left: 109px;
-}
-.tittle_text span {
-    background: #fff;
-    position: relative;
-    display: inline-block;
-    z-index: 99;
-}
-.tittle_text::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: #000;
-}
-
-@media only screen and (max-width:767px){
-    .tittle_text {
-    font-size: 35px;
-    margin: 0 0 14px;
-    padding-left: 17px;
-}
-}
-
 /* Ad component stylesheet */
 .add_wrapper {
     height: 90px;
@@ -702,9 +665,9 @@ h4 {
     line-height: 24px;
 }
 }
-h1{
+/* h1{
     font-size: 35px;
     color: #6363fb;
     text-align: center;
     padding: 45px;
-}
+} */

@@ -252,9 +252,9 @@ ul li{
     font-size: 72px;
     font-weight: 400;
     text-transform: uppercase;
-    position: relative;
-    margin: 0 0 22px;
-    padding-left: 109px;
+    position: static;
+    margin: 0 0 15px;
+    padding-left: 112px;
 }
 .tittle_text span {
     background: #fff;
