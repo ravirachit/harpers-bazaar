@@ -8,8 +8,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 GPT.enableSingleRequest();
-GPT.configure({viewableThreshold: 0.3});
-GPT.configure({renderWhenViewable: false});
 
 // Images
 // const banner_img = './assets/images/banner.png';
@@ -18,7 +16,6 @@ const banner = './assets/images/banner.png';
 const beauty = './assets/images/beauty.png';
 
 export default function Home({homeData}){
-  
   var settings = {
     dots: true,
     autoplay: true,
@@ -177,7 +174,7 @@ export default function Home({homeData}){
                             </div>
                         </div>
                         <div className="add_sec">
-                        <div id="div-gpt-ad-6326067-4">
+                        <div id="div-gpt-ad-6326067-2">
                 <GPT
                     adUnitPath="/1007232/HarperBazaar_HP_300x250_MTF"
                     slotSize={[300, 250]}

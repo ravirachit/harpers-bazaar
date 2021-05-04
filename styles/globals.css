@@ -159,8 +159,8 @@ img{
 }
 .banner img{
     min-width: 100%;
-    min-height: 90vh;
-    max-height: 90vh;
+    min-height: 100%;
+    max-height: 100%;
 }
 .slick-dots {
     bottom: -35px !important;
@@ -1064,17 +1064,7 @@ margin: 0;
 
 
 /* Header component stylesheet */
-.humburger_overlay {
-    display: none;
-}
-.mobile_header {
-    display: none;
-}
-.upperheader {
-    padding: 20px 0 7px;
-    background: #fff;
-    text-align: center;
-}
+
 .logo {
     display: inline-block;
     height: 76px;

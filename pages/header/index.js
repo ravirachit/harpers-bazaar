@@ -11,10 +11,14 @@ const twitter_img = '../assets/images/twitter.png';
 const serach_img = '../assets/images/search.png';
 const cross_img = '../assets/images/cross.png';
 const input_search_img = '../assets/images/inputsearchicon.png';
+const mobilelogo =  '../assets/images/mobile_logo.png';
+const cross =  '../assets/images/cross.png';
+const menu_img = '../assets/images/menu_icon.png';
 
 export default function Header(){
     const [isActive, setBoolean] = useState(null);
     const [isSearch, setSearch] = useState(false);
+    const [isMobMenu, setMobMenu] = useState(false);
 
      // Search Value State
      const [searchData, setSearchData] = useState(null);
@@ -76,7 +80,7 @@ const router = useRouter();
                         <img src={strickyLogo} alt="stickyLogo" />
                     </a>
                     <nav className="menu">
-                        <Link href="/"><a className={router.pathname === "/" ? "activeNavMenu" : ""}>Home</a></Link>
+                        <Link href="/"><a className={router.pathname === "/" ? "activeNavMenu" : ""}>HOME</a></Link>
                         <Link href="/fashion" ><a className={router.pathname === "/fashion" ? "activeNavMenu" : ""}>FASHION</a></Link>
                         <Link href="/beauty"><a className={router.pathname === "/beauty" ? "activeNavMenu" : ""}>BEAUTY</a></Link>
                         <Link href="/culture"><a className={router.pathname === "/culture" ? "activeNavMenu" : ""}>CULTURE</a></Link>
@@ -89,6 +93,46 @@ const router = useRouter();
                     </span>
                     </div>
                 </div>
+
+
+                {/* Mobile Header and menu */}
+                {
+        isMobMenu?<div className="humburger_overlay">
+            <div className="menu_wrapper">
+                <div className="mobile_header_top">
+                    <a href="www.facebook.com" className="mobile_logo">
+                        <img src={mobilelogo} alt="mobilelogo" />
+                    </a>
+                    <span className="cross_menu" onClick={()=>setMobMenu(false)}>
+                        <img src={cross} alt="crossIcon" />
+                    </span>
+
+                </div>
+
+
+                <nav className="mobile_menu">
+                        <Link href="/"><a onClick={()=>setMobMenu(false)}>HOME</a></Link>
+                        <Link href="/fashion"><a onClick={()=>setMobMenu(false)}>FASHION</a></Link>
+                        <Link href="/beauty"><a onClick={()=>setMobMenu(false)}>BEAUTY</a></Link>
+                        <Link href="/culture"><a onClick={()=>setMobMenu(false)}>CULTURE</a></Link>
+                        <Link href="/celebrity"><a onClick={()=>setMobMenu(false)}>CELEBRITY</a></Link>
+                        <Link href="/travelAndFood"><a onClick={()=>setMobMenu(false)}>TRAVEL AND FOOD</a></Link>
+                </nav>
+            </div>
+        </div>:null
+}
+
+                <div className="mobile_header">
+                <span className="menu_icon"  onClick={()=>setMobMenu(true)}>
+                    <img src={menu_img} alt="menu" />
+                </span>
+                <a href="www.facebook.com" className="logo">
+                    <img src={logo} alt="logo" />
+                </a>
+                <span className="searchicon" onClick={()=>setSearch(true)}>
+                    <img className="searchImg" src={serach_img} alt="search"/>
+                </span>
+            </div>
             </header>
 
              {/* Search bar */}

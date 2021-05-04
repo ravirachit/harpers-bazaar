@@ -416,17 +416,13 @@
 .bottomheader, .upperheader {
     display: none;
 }
-.mobile_header {
-    background: #f6f6f6;
-    position: relative;
-    justify-content: flex-start;
-    align-items: center;
-    display: flex;
-    padding: 10px;
-}
+
 
 .mobile_header a.menu_icon {
     margin-right: 18px;
+}
+.menu_icon{
+    margin-right: 15px;
 }
 .mobile_header a {
     display: inline-block;
@@ -440,7 +436,7 @@
 
 .searchicon {
     position: absolute;
-    right: 10px;
+    right: 10px !important;
     top: 50%;
     transform: translateY(-50%);
     width: 31px;
@@ -502,8 +498,11 @@
     position: relative;
     justify-content: flex-start;
     align-items: center;
-    display: flex;
+    display: flex !important;
     padding: 10px;
+}
+.humburger_overlay {
+    display: block!important;
 }
 }
 
@@ -657,6 +656,10 @@ h4 {
     font-size: 18px;
     line-height: 24px;
 }
+.fixed{
+    display: none;
+}
+
 }
 /* h1{
     font-size: 35px;
