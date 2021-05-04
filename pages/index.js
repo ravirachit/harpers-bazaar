@@ -8,8 +8,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 GPT.enableSingleRequest();
-// GPT.configure({viewableThreshold: 0.3});
-// GPT.configure({renderWhenViewable: true});
+GPT.configure({viewableThreshold: 0.3});
+GPT.configure({renderWhenViewable: false});
 
 // Images
 // const banner_img = './assets/images/banner.png';
