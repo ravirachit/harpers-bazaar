@@ -3,16 +3,28 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import {Bling as GPT} from "react-gpt";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 GPT.enableSingleRequest();
 
 // Images
 // const banner_img = './assets/images/banner.png';
 const add_img = './assets/images/add.png';
-const FashionAdd = './assets/images/fashionadd.png';
-const cultureAdImg = './assets/images/300x250.png';
+const banner = './assets/images/banner.png';
+const beauty = './assets/images/beauty.png';
 
 export default function Home({homeData}){
+  var settings = {
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
     console.log("homeData- ", homeData);
     return(
        <>
@@ -33,11 +45,21 @@ export default function Home({homeData}){
              {/* Slider */}
            <section className="banner">
               <div className="container">
-                   <figure>
-                        <img src={homeData.data.feed.templatedata[0].content_data.widget_data.widget_data.main_data[0].feature_image_data.url} alt="banner"/>
-                   </figure>
-                   <h2>{homeData.data.feed.templatedata[0].content_data.widget_data.widget_data.main_data[0].headline}</h2>
-              </div>
+                <Slider {...settings}>
+                  <div>
+                  <figure>
+                          <img src={homeData.data.feed.templatedata[0].content_data.widget_data.widget_data.main_data[0].feature_image_data.url} alt="banner"/>
+                  </figure>
+                  <h2>{homeData.data.feed.templatedata[0].content_data.widget_data.widget_data.main_data[0].headline}</h2>
+                  </div>
+                  <div>
+                  <figure>
+                      <img src={banner} alt="banner"/>
+                  </figure>
+                  <h2>Dummy Data for slider banner</h2>
+                  </div>
+              </Slider>
+                  </div>
         </section>
 
 

@@ -157,6 +157,14 @@ img{
 .relative {
     position: relative;
 }
+.banner img{
+    min-width: 100%;
+    min-height: 90vh;
+    max-height: 90vh;
+}
+.slick-dots {
+    bottom: -35px !important;
+}
 img {
     max-width: 100%;
     width: auto;
