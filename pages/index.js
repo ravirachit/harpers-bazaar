@@ -26,6 +26,7 @@ export default function Home({homeData}){
     slidesToScroll: 1
   };
     console.log("homeData- ", homeData);
+    
     return(
        <>
         <Head>
@@ -313,7 +314,7 @@ export default function Home({homeData}){
 }
 
 export async function getStaticProps(){
-    // const res = await fetch(`https://harpers-bazaar-j1fyovwyf-ravirachit.vercel.app/api/jobs`);  
+    // const res = await fetch(`https://harpers-bazaar-j1fyovwyf-ravirachit.vercel.app/api/jobs`); 
     const homeData = {
         "data": {
           "feed": {

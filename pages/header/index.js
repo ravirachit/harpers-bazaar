@@ -19,6 +19,7 @@ export default function Header(){
     const [isActive, setBoolean] = useState(null);
     const [isSearch, setSearch] = useState(false);
     const [isMobMenu, setMobMenu] = useState(false);
+    const router = useRouter();
 
      // Search Value State
      const [searchData, setSearchData] = useState(null);
@@ -43,13 +44,13 @@ export default function Header(){
     setSearchData(val.target.value);
    }
    function GetSearchInputData(){
-    localStorage.removeItem('search_res');
-    history.push(`/search/${searchData}`);
-    getSearchData();
-    localStorage.setItem('search_res',JSON.stringify(searchRes));
+    // localStorage.removeItem('search_res');
+    router.push(`/search/${searchData}`);
+    // getSearchData();
+    // localStorage.setItem('search_res',JSON.stringify(searchRes));
     setSearch(false);
    }
-const router = useRouter();
+
     return (
         <>
             <header id="header">
@@ -156,8 +157,7 @@ const router = useRouter();
                     </div>
                     </div>
                     </div>:null
-}
-           
+}      
         </>
     )
 }

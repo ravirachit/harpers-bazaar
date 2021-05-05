@@ -339,6 +339,9 @@
     right: 32px;
     display: inline-block;
 }
+.search_input img{
+    cursor: pointer;
+}
 
 /* Mobile Header */
 .mobile_header {
