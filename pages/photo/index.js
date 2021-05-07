@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { Component } from 'react';
 import useDfpSlot from '../../useDfpSlot';
 export default function Photo(){
@@ -8,6 +9,9 @@ export default function Photo(){
       });
     return(
         <>
+        <Head>
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+        </Head>
             <div>Photo is working</div>
             <div id="div-gpt-ad-6326067-1" style={{ width: '320px', height: '100px' }}/>
         </>
