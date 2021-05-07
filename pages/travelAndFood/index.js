@@ -67,7 +67,7 @@ export default function TravelAndFood({travelAndFoodData}){
             <h4>Must Read</h4>
             <div className="right_card">
                 <figure><img src={travelAndFoodData.data.feed[1].feature_image_data.url} alt="rhs_img" /></figure>
-                <p>{travelAndFoodData.data.feed[1].headline}</p>
+                <p><Link href={'/story/1992'}>{travelAndFoodData.data.feed[1].headline}</Link></p>
             </div>
 			</div>
             </div>
@@ -78,9 +78,9 @@ export default function TravelAndFood({travelAndFoodData}){
                         <li>
                         <div className="list_detail">
                             <strong>{moment(travelAndFood.updated_at).format("MMM DD, YYYY")}</strong>
-                            <h3><a href={travelAndFood.url}>{travelAndFood.headline}</a></h3>
+                            <h3><Link href={'/story/1992'}>{travelAndFood.headline}</Link></h3>
                             <p>{travelAndFood.introtext}</p>
-                            <span>By <a href="/authors/bazaar-india">{travelAndFood.author_data[0].author_name}</a></span>
+                            <Link href="/author/bazaar-india/"><span>By {travelAndFood.author_data[0].author_name}</span></Link>
                         </div>
                         <figure className="list_pic">
                             <img src={travelAndFood.feature_image_data.url} alt="list_img1"/>

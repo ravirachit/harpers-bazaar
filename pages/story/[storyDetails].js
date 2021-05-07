@@ -3,6 +3,8 @@ import moment from 'moment';
 import { useRouter } from "next/router";
 import {Bling as GPT} from "react-gpt";
 import Head from 'next/head';
+import parse from 'html-react-parser';
+import Link from 'next/link';
 
 GPT.enableSingleRequest();
 
@@ -12,8 +14,9 @@ const smalladd = '../assets/images/300x250.png';
 const Ads = '../assets/images/add.png';
 const backArrowImg = '../assets/images/backarrow.png';
 
-export default function SearchContent(){
+export default function StoryContent(){
     const router = useRouter();
+    function createMarkup() { return {__html: storyData.data.feed[0].fulltext}; };
     const rhsData = {
         "data": {
           "feed": {
@@ -636,41 +639,41 @@ export default function SearchContent(){
           }
         }
       }
-      const searchContentData = {
+      const storyData = {
         "data": {
           "feed": [
             {
-              "content_id": 1943,
+              "content_id": 1979,
               "apps_id": "1",
               "post_types_id": "2",
               "content_type": "story",
-              "headline": "Journey to Cinque Terre in Italy With Fashion Designer Kresha Bajaj",
-              "introtext": "&lt;p&gt;As we daydream about blue skies and sandy shores, fashion designer and avid traveller Kresha Bajaj takes us to her favourite city to satisfy our wanderlust.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;",
-              "fulltext": "&lt;p&gt;&amp;ldquo;During my recent trip to Italy, I visited Cinque Terre and it soon became one of my favourite places. The colours, culture, and ambience of the five towns was truly unique and inspiring. My list of things to do is exhaustive&amp;mdash;this coastal area has so much to offer! Go catch the views at Santuario di Nostra Signora di Montenero in Riomaggiore, which is a great Instagram spot. Try the &amp;lsquo;Pesto Experience&amp;rsquo; at Nessun Dorma in Manarola, where you learn how to make your own pesto with the local chef. A boat ride through Cinque Terre is an absolute must, and you can also take a kayaking trip from Monterosso, paddling across the five different villages while passing through the rugged cliffs and hidden coves. A wine tour during sunset through Riomaggiorecomes highly recommended and for good reason. If an offbeat dining experience is what you prefer, definitely go to Cesarina&amp;rsquo;sHome, where you get to feast on a traditional Italian meal with live cooking and recipes that are native to the region.&amp;rdquo;&lt;/p&gt;&lt;p&gt;&lt;img title='image--007_112320020636.png' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--007_112320020636.png' alt='image--007_112320020636.png' width='357'  /&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Kresha Bajaj, Fashion Designer&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Do Try: &amp;ldquo;The Nessun Dorma restaurant offers the best views in Manarola. And Il Porticciolo, another Italian restaurant, serves the most delicious bruschetta I have ever tasted, along with great pasta and pizzas. If you&amp;rsquo;re there in summer, I recommend Gelateria Vernazza for their fresh, artisan gelatos in unique flavours.&amp;rdquo;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;img title='image--005_112320020924.png' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--005_112320020924.png' alt='image--005_112320020924.png' width='370'  /&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;My Tip: &amp;ldquo;Take a trek to the top of Vernazza, where you can find a beautiful picnic spot overlooking the whole city.&amp;rdquo;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;img title='image--004_112320020557.png' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--004_112320020557.png' alt='image--004_112320020557.png' width='388'  /&gt;&lt;/p&gt;&lt;p&gt;Riomaggiore village.&lt;/p&gt;&lt;p&gt;&lt;img title='image--002_112320020301.png' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--002_112320020301.png' alt='image--002_112320020301.png' width='333'  /&gt;&lt;/p&gt;",
-              "amp_fulltext": "&lt;p&gt;&ldquo;During my recent trip to Italy, I visited Cinque Terre and it soon became one of my favourite places. The colours, culture, and ambience of the five towns was truly unique and inspiring. My list of things to do is exhaustive&mdash;this coastal area has so much to offer! Go catch the views at Santuario di Nostra Signora di Montenero in Riomaggiore, which is a great Instagram spot. Try the &lsquo;Pesto Experience&rsquo; at Nessun Dorma in Manarola, where you learn how to make your own pesto with the local chef. A boat ride through Cinque Terre is an absolute must, and you can also take a kayaking trip from Monterosso, paddling across the five different villages while passing through the rugged cliffs and hidden coves. A wine tour during sunset through Riomaggiorecomes highly recommended and for good reason. If an offbeat dining experience is what you prefer, definitely go to Cesarina&rsquo;sHome, where you get to feast on a traditional Italian meal with live cooking and recipes that are native to the region.&rdquo;&lt;/p&gt;&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--007_112320020636.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Kresha Bajaj, Fashion Designer&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Do Try: &ldquo;The Nessun Dorma restaurant offers the best views in Manarola. And Il Porticciolo, another Italian restaurant, serves the most delicious bruschetta I have ever tasted, along with great pasta and pizzas. If you&rsquo;re there in summer, I recommend Gelateria Vernazza for their fresh, artisan gelatos in unique flavours.&rdquo;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--005_112320020924.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;My Tip: &ldquo;Take a trek to the top of Vernazza, where you can find a beautiful picnic spot overlooking the whole city.&rdquo;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--004_112320020557.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;&lt;p&gt;Riomaggiore village.&lt;/p&gt;&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--002_112320020301.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;",
+              "headline": "8  Women Share Their Lockdown Beauty Learnings",
+              "introtext": "We asked our beauty-conscious tribe to let us in on the tweaks they have made to their beauty regimes to achieve flawless skin, luscious locks, and more.",
+              "fulltext": "&lt;p&gt;&lt;strong&gt;&lt;u&gt;Samyukta Nair, Food and Fashion Entrepreneur&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-006271120025708.png' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;ldquo;Embracing my curls during this time has been a game-changer for me, and I have been enjoying them courtesy Curlsmith&amp;rsquo;s Curl Quenching Conditioning Wash and their Oil-In-Cream. I&amp;rsquo;ve also made a conscious effort to change my night-time skincare routine with a weekly deep cleanse and exfoliation, using the Forest Essentials Multani Mitti Ubtan mixed with their Aloevera Juice. I call it a night with a thin layer of their Ojas Illuminating Night Beauty Balm.&amp;rdquo;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-014271120025900.png' /&gt;&lt;img alt=''  src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-016271120025944.png' width='70' /&gt;&lt;img alt=''  src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-032271120030016.png' width='140' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Forest Essentials Aloevera Juice, Rs.575&lt;/p&gt;\r\n\r\n&lt;p&gt;Curlsmith Curl Quenching Conditioning Wash and Oil-In- Cream,&amp;nbsp; Rs.2,000 (approx),&lt;/p&gt;\r\n\r\n&lt;p&gt;Ojas Illuminating Night Beauty Balm, Rs.3,800.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;Mallika Tarkas Parekh, Founder and Director of AMP Fitness, LLP, Exclusive Licensee of Physique 57 in India&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=''  src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-005271120030127.png' width='232' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;ldquo;Honestly, it feels amazing to be able to give my make-up products a rest! The lockdown has been about exfoliation and hydration for me. My favourites include the SkinCeuticals C + AHA serum, which smells awful but really works for my skin, the SkinCeuticals Hydrating B5 Gel, and the Joanna Vargas Exfoliating Mask and Daily Hydrating Cream. If I&amp;rsquo;m feeling fancy (even for Zoom meetings), I spritz on Jo Malone&amp;rsquo;s Nectarine Blossom and Honey Cologne to brighten up my mood.&amp;rdquo;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=''  src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-020271120032417.png' width='183' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Skinceuticals Hydrating B5 Gel, Rs.6,100 (approx)&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;&amp;nbsp;Karishma Manga Bedi, Entrepreneur&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-009271120032511.png' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;ldquo;I decided to use this time at home to do all the things I couldn&amp;rsquo;t earlier, including learning to play the piano, reading, and making time for self-care. In addition to my regular beauty regime, I have started using the Forest Essentials Facial Ubtan (in Soundarya) as a face pack in the morning and I follow it up with their Facial Tonic Mist Hasayan Rose. At night, I use the Forest Essentials Ojas Glow Replenishing Night Beauty Balm and also massage my face with a rose quartz roller that has been kept in the fridge for at least an hour. The result is supple and plumped skin.&amp;rdquo;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-017271120032640.png' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Forest Essentials Facial Tonic Mist Rosewater&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;Shaheen Abbas, Jewellery Designer&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-007271120032738.png' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;ldquo;During this lockdown, my focus has been on keeping my skin hydrated and exfoliated. I have been using Farmacy&amp;rsquo;s Honeymoon Glow AHA Resurfacing Night Serum, mixed with The Inkey List&amp;rsquo;s Hyaluronic Acid Serum two to three times a week&amp;mdash;this combination really helps keep my skin looking fresh. During the day, I use SK-II&amp;rsquo;s Facial Treatment Essence, followed by Drunk Elephant&amp;rsquo;s C-Firma Day Serum (again mixed with hyaluronic acid). For overall hydration, I have been using Drunk Elephant&amp;rsquo;s Protini Polypeptide Cream, which is fabulous! The Oats Cleansing Balm from The Inkey List has been my go-to, lately, because it keeps my skin clean without stripping off the natural oils. And when I feel like my skin needs an extra shot of hydration, I turn to Summer Fridays&amp;rsquo; Jet Lag Mask.&amp;rdquo;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-021271120033013.png' /&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-022271120033032.png' /&gt;&lt;img alt=''  src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-023271120033052.png' width='63' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Drunk Elephant Protini Polypeptide Cream, Rs.5,000 (approx),&lt;/p&gt;\r\n\r\n&lt;p&gt;The Inkey List Hyaluronic Acid Serum, Rs. 590 (approx), Farmacy&lt;/p&gt;\r\n\r\n&lt;p&gt;Honeymoon Glow, Rs.4,270 (approx).&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;Diva Dhawan, Model&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-012271120033228.png' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;ldquo;I have taken this time to really take care of my skin...keeping it clean and allowing it to breathe. I have opted for a super-minimal routine. The two products that I&amp;rsquo;m using at the moment are Bioderma&amp;rsquo;s moisturiser for dry skin and Bobbi Brown&amp;rsquo;s Vitamin Enriched Eye Base. Oh, and when I feel like pampering my skin, I massage my face with a jade roller...mostly once a week.&amp;rdquo;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=''  src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-025271120033414.png' width='116' /&gt;&lt;img alt=''  src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-024271120033444.png' width='242' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Bioderma Atoderm Cr&amp;egrave;me, Rs.599&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;Monica Dogra, Musician&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=''  src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-010271120033530.png' width='275' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;ldquo;Over the past few months I haven&amp;rsquo;t been able to visit my dermatologist or facialist. As a result, I have made a conscious shift in the products I use every day to ensure my skin is taken care of. Good skincare leads to great skin, and I have been using La Mer&amp;rsquo;s The Deep Cleansing Foam, followed by a moisturiser by Peter Thomas Roth, which keeps my skin hydrated all day long. And yes, I religiously use an eye cream&amp;mdash;the one by Clinique is excellent!&amp;rdquo;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=''  src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-029271120033648.png' width='85' /&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-030271120033713.png' /&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-028271120033740.png' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;La Mer Deep The Cleansing Foam, Rs.6,750 (approx)&lt;/p&gt;\r\n\r\n&lt;p&gt;Hydrating Moisturizer, Rs.3,800 (approx), Clinique&lt;br /&gt;\r\nPep-Start Eye Cream, Rs.2,300.&lt;/p&gt;\r\n\r\n&lt;p&gt;Peter Thomas Roth Water Drench Hyaluronic Cloud Cream&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;Shaleena Nathani, Celebrity Stylist&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-001271120033940.png' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;ldquo;The one thing that this pandemic has taught me, in terms of skincare, is consistency. I was extremely impatient earlier, and over the past few months, I have religiously followed a regime recommended by a derm, and it has really helped me. It&amp;rsquo;s quite simple, actually: I start off with a foam cleanser and apply a serum mixed with a bit of retinol cream. Then, I top it up with a moisturiser. And I wear sunscreen all the time, even when I am indoors. These simple steps, and a little bit of patience, have transformed my skin.&amp;rdquo;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-031271120034117.png' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Shangpree Spa Care System S-Energy Facial Mousse Cleanser, Rs.1,900&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;u&gt;Richa Moorjani, Actor&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-000271120034205.png' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;ldquo;I love using clean, cruelty-free, great-smelling products. Throughout the lockdown, I&amp;rsquo;ve been using Mario Badescu&amp;rsquo;s Cleansing Enzyme Gel and Botanical Exfoliating Scrub to cleanse and exfoliate. I follow that with their Aloe, Chamomile and Lavender Facial Spray (which I also use throughout the day), and then apply Soma Ayurvedic&amp;rsquo;s Vitamin C Serum, followed by their Lavender, Moringa, Avocado Under-Eye Gel. During the day, I always wear a moisturiser with SPF, like Mineral Fusion&amp;rsquo;s SPF 40 Moisturizer; and at night, I slather on Soma Ayurvedic&amp;rsquo;s Aloe Vera and Saffron Anti-Aging Cream.&amp;rdquo;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=''  src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-026271120034350.png' width='63' /&gt;&lt;img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-027271120034412.png' /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Mario Badescu Facial Spray with Aloe, Chamomile and Lavender Facial, Rs.510 (approx)&lt;/p&gt;\r\n\r\n&lt;p&gt;Mineral Fusion Mineral SPF 40 Face Moisturizer, Rs.1,840 (approx).&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;",
+              "amp_fulltext": "&lt;p&gt;&lt;strong&gt;&lt;u&gt;Samyukta Nair, Food and Fashion Entrepreneur&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-006271120025708.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;&ldquo;Embracing my curls during this time has been a game-changer for me, and I have been enjoying them courtesy Curlsmith&rsquo;s Curl Quenching Conditioning Wash and their Oil-In-Cream. I&rsquo;ve also made a conscious effort to change my night-time skincare routine with a weekly deep cleanse and exfoliation, using the Forest Essentials Multani Mitti Ubtan mixed with their Aloevera Juice. I call it a night with a thin layer of their Ojas Illuminating Night Beauty Balm.&rdquo;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-014271120025900.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-016271120025944.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-032271120030016.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;Forest Essentials Aloevera Juice, Rs.575&lt;/p&gt;\n\n&lt;p&gt;Curlsmith Curl Quenching Conditioning Wash and Oil-In- Cream,&amp;nbsp; Rs.2,000 (approx),&lt;/p&gt;\n\n&lt;p&gt;Ojas Illuminating Night Beauty Balm, Rs.3,800.&lt;/p&gt;\n\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;Mallika Tarkas Parekh, Founder and Director of AMP Fitness, LLP, Exclusive Licensee of Physique 57 in India&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-005271120030127.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n\n&lt;p&gt;&ldquo;Honestly, it feels amazing to be able to give my make-up products a rest! The lockdown has been about exfoliation and hydration for me. My favourites include the SkinCeuticals C + AHA serum, which smells awful but really works for my skin, the SkinCeuticals Hydrating B5 Gel, and the Joanna Vargas Exfoliating Mask and Daily Hydrating Cream. If I&rsquo;m feeling fancy (even for Zoom meetings), I spritz on Jo Malone&rsquo;s Nectarine Blossom and Honey Cologne to brighten up my mood.&rdquo;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-020271120032417.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;Skinceuticals Hydrating B5 Gel, Rs.6,100 (approx)&lt;/p&gt;\n\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;&amp;nbsp;Karishma Manga Bedi, Entrepreneur&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-009271120032511.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;&ldquo;I decided to use this time at home to do all the things I couldn&rsquo;t earlier, including learning to play the piano, reading, and making time for self-care. In addition to my regular beauty regime, I have started using the Forest Essentials Facial Ubtan (in Soundarya) as a face pack in the morning and I follow it up with their Facial Tonic Mist Hasayan Rose. At night, I use the Forest Essentials Ojas Glow Replenishing Night Beauty Balm and also massage my face with a rose quartz roller that has been kept in the fridge for at least an hour. The result is supple and plumped skin.&rdquo;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-017271120032640.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;Forest Essentials Facial Tonic Mist Rosewater&lt;/p&gt;\n\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;Shaheen Abbas, Jewellery Designer&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-007271120032738.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;&ldquo;During this lockdown, my focus has been on keeping my skin hydrated and exfoliated. I have been using Farmacy&rsquo;s Honeymoon Glow AHA Resurfacing Night Serum, mixed with The Inkey List&rsquo;s Hyaluronic Acid Serum two to three times a week&mdash;this combination really helps keep my skin looking fresh. During the day, I use SK-II&rsquo;s Facial Treatment Essence, followed by Drunk Elephant&rsquo;s C-Firma Day Serum (again mixed with hyaluronic acid). For overall hydration, I have been using Drunk Elephant&rsquo;s Protini Polypeptide Cream, which is fabulous! The Oats Cleansing Balm from The Inkey List has been my go-to, lately, because it keeps my skin clean without stripping off the natural oils. And when I feel like my skin needs an extra shot of hydration, I turn to Summer Fridays&rsquo; Jet Lag Mask.&rdquo;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-021271120033013.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-022271120033032.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-023271120033052.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;Drunk Elephant Protini Polypeptide Cream, Rs.5,000 (approx),&lt;/p&gt;\n\n&lt;p&gt;The Inkey List Hyaluronic Acid Serum, Rs. 590 (approx), Farmacy&lt;/p&gt;\n\n&lt;p&gt;Honeymoon Glow, Rs.4,270 (approx).&lt;/p&gt;\n\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;Diva Dhawan, Model&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-012271120033228.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;&ldquo;I have taken this time to really take care of my skin...keeping it clean and allowing it to breathe. I have opted for a super-minimal routine. The two products that I&rsquo;m using at the moment are Bioderma&rsquo;s moisturiser for dry skin and Bobbi Brown&rsquo;s Vitamin Enriched Eye Base. Oh, and when I feel like pampering my skin, I massage my face with a jade roller...mostly once a week.&rdquo;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-025271120033414.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-024271120033444.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;Bioderma Atoderm Cr&egrave;me, Rs.599&lt;/p&gt;\n\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;Monica Dogra, Musician&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-010271120033530.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;&ldquo;Over the past few months I haven&rsquo;t been able to visit my dermatologist or facialist. As a result, I have made a conscious shift in the products I use every day to ensure my skin is taken care of. Good skincare leads to great skin, and I have been using La Mer&rsquo;s The Deep Cleansing Foam, followed by a moisturiser by Peter Thomas Roth, which keeps my skin hydrated all day long. And yes, I religiously use an eye cream&mdash;the one by Clinique is excellent!&rdquo;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-029271120033648.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-030271120033713.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-028271120033740.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;La Mer Deep The Cleansing Foam, Rs.6,750 (approx)&lt;/p&gt;\n\n&lt;p&gt;Hydrating Moisturizer, Rs.3,800 (approx), Clinique&lt;br&gt;\nPep-Start Eye Cream, Rs.2,300.&lt;/p&gt;\n\n&lt;p&gt;Peter Thomas Roth Water Drench Hyaluronic Cloud Cream&lt;/p&gt;\n\n&lt;p&gt;&lt;u&gt;&lt;strong&gt;Shaleena Nathani, Celebrity Stylist&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-001271120033940.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;&ldquo;The one thing that this pandemic has taught me, in terms of skincare, is consistency. I was extremely impatient earlier, and over the past few months, I have religiously followed a regime recommended by a derm, and it has really helped me. It&rsquo;s quite simple, actually: I start off with a foam cleanser and apply a serum mixed with a bit of retinol cream. Then, I top it up with a moisturiser. And I wear sunscreen all the time, even when I am indoors. These simple steps, and a little bit of patience, have transformed my skin.&rdquo;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-031271120034117.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;Shangpree Spa Care System S-Energy Facial Mousse Cleanser, Rs.1,900&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;&lt;u&gt;Richa Moorjani, Actor&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-000271120034205.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;&ldquo;I love using clean, cruelty-free, great-smelling products. Throughout the lockdown, I&rsquo;ve been using Mario Badescu&rsquo;s Cleansing Enzyme Gel and Botanical Exfoliating Scrub to cleanse and exfoliate. I follow that with their Aloe, Chamomile and Lavender Facial Spray (which I also use throughout the day), and then apply Soma Ayurvedic&rsquo;s Vitamin C Serum, followed by their Lavender, Moringa, Avocado Under-Eye Gel. During the day, I always wear a moisturiser with SPF, like Mineral Fusion&rsquo;s SPF 40 Moisturizer; and at night, I slather on Soma Ayurvedic&rsquo;s Aloe Vera and Saffron Anti-Aging Cream.&rdquo;&lt;/p&gt;\n\n&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-026271120034350.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-027271120034412.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;\n\n&lt;p&gt;Mario Badescu Facial Spray with Aloe, Chamomile and Lavender Facial, Rs.510 (approx)&lt;/p&gt;\n\n&lt;p&gt;Mineral Fusion Mineral SPF 40 Face Moisturizer, Rs.1,840 (approx).&lt;/p&gt;\n\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;",
               "category_trail": [
                 {
-                  "id": 4,
-                  "title": "Travel & Food",
-                  "slug": "travel-food",
+                  "id": 3,
+                  "title": "Beauty",
+                  "slug": "beauty",
                   "parent": "0"
                 }
               ],
-              "primary_section_id": 4,
-              "primary_section_name": "Travel & Food",
-              "primary_section_slug": "travel-food",
-              "primary_id": "4",
-              "primary_id_name": "Travel & Food",
-              "primary_id_slug": "travel-food",
-              "url": "/travel-food/story/the-travel-diaries--cinque-terre-italy-by-kresha-bajaj-1943",
-              "full_url": "https://dev-harperbazar.intoday.in/travel-food/story/the-travel-diaries--cinque-terre-italy-by-kresha-bajaj-1943",
-              "amp_full_url": "https://dev-harperbazar.intoday.in/amp/travel-food/story/the-travel-diaries--cinque-terre-italy-by-kresha-bajaj-1943",
-              "slug": "the-travel-diaries--cinque-terre-italy-by-kresha-bajaj",
-              "excerpt": "&lt;p&gt;As we daydream about blue skies and sandy shores, fashion designer and avid traveller Kresha Bajaj takes us to her favourite city to satisfy our wanderlust.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;",
-              "publish_up": "2020-11-23 15:00:19",
+              "primary_section_id": 3,
+              "primary_section_name": "Beauty",
+              "primary_section_slug": "beauty",
+              "primary_id": "3",
+              "primary_id_name": "Beauty",
+              "primary_id_slug": "beauty",
+              "url": "/beauty/story/8-lovely-women-share-their-lockdown-beauty-learnings-1979",
+              "full_url": "https://alpha-harperbazar.intoday.in/beauty/story/8-lovely-women-share-their-lockdown-beauty-learnings-1979",
+              "amp_full_url": "https://alpha-harperbazar.intoday.in/amp/beauty/story/8-lovely-women-share-their-lockdown-beauty-learnings-1979",
+              "slug": "8-lovely-women-share-their-lockdown-beauty-learnings",
+              "excerpt": "We asked our beauty-conscious tribe to let us in on the tweaks they have made to their beauty regimes to achieve flawless skin, luscious locks, and more.",
+              "publish_up": "2020-11-30 18:01:00",
               "publish_down": null,
-              "metatitle": "",
-              "metadesc": "",
+              "metatitle": "Changing Faces",
+              "metadesc": "We asked our beauty-conscious tribe to let us in on the tweaks they have made to their beauty regimes\r\nto achieve flawless skin, luscious locks, and more.",
               "metakey": "",
               "highlights": "",
               "rating": "",
@@ -678,98 +681,10 @@ export default function SearchContent(){
               "review_image_data": "https://akm-img-a-in.tosshub.com/sites/harpers-bazaar/resources/images/default_454x255.png",
               "review_pros": "",
               "review_cons": "",
-              "feature_image": "https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/travel1_251120041113_1199x675.jpg",
+              "feature_image": "https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/beauty301120055703.jpeg",
               "feature_image_data": {
-                "url": "https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/travel1_251120041113_1199x675.jpg",
-                "title": "travel1_251120041113_1199x675",
-                "caption": "",
-                "alt_text": "",
-                "description": ""
-              },
-              "square_image": "https://akm-img-a-in.tosshub.com/sites/harpers-bazaar/resources/images/default_454x255.png",
-              "square_image_data": "https://akm-img-a-in.tosshub.com/sites/harpers-bazaar/resources/images/default_454x255.png",
-              "vertical_image": "https://akm-img-a-in.tosshub.com/sites/harpers-bazaar/resources/images/default_294x523.png",
-              "vertical_image_data": "https://akm-img-a-in.tosshub.com/sites/harpers-bazaar/resources/images/default_294x523.png",
-              "feature_image_lazy": "https://akm-img-a-in.tosshub.com/sites/harpers-bazaar/resources/images/default_454x255.png",
-              "vertical_image_lazy": "https://akm-img-a-in.tosshub.com/sites/harpers-bazaar/resources/images/default_294x523.png",
-              "author_data": [
-                {
-                  "authors_id": 1,
-                  "author_name": "Bazaar India",
-                  "author_slug": "bazaar-india",
-                  "author_image": [
-                    {
-                      "file_path": "https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/priyanka_251120033723_1099x675.jpeg",
-                      "extra": {
-                        "text": "priyanka_251120033723_1099x675",
-                        "caption": "",
-                        "alt_text": "",
-                        "description": ""
-                      }
-                    }
-                  ]
-                }
-              ],
-              "section_data": [
-                {
-                  "section_id": 4,
-                  "section_name": "Travel & Food",
-                  "category_id": "",
-                  "category_name": ""
-                }
-              ],
-              "created_at": "2020-11-23T08:28:52.000000Z",
-              "created_by_id": "13",
-              "created_by_name": "prachi goyal",
-              "cache_time": "05/05/2021 02:24:22 pm",
-              "updated_at": "2020-12-16 15:03:41",
-              "galleries": "",
-              "video_node": "",
-              "previous_url_id": "1940"
-            },
-            {
-              "content_id": 1948,
-              "apps_id": "1",
-              "post_types_id": "2",
-              "content_type": "story",
-              "headline": "Discover Copenhagen With Travel Influencer Shenaz Treasury",
-              "introtext": "&lt;p&gt;'Christiania’s graffiti- painted walls, and cobblestone alleys with cosy bars and cafés, are what make it interesting.”&lt;/p&gt;",
-              "fulltext": "&lt;p&gt;&lt;/p&gt;&lt;p&gt;“I visited the Nordic city recently, and absolutely loved its vibe. Apart from getting my fill of Danish pastries, I explored areas like Freetown Christiania—a district that has its own rules, completely independent of the Danish government. Established in the ’70s by a group of hippies, it’s the polar opposite of what Copenhagen is known for. Christiania’s graffiti painted walls, and cobblestone alleys with cozy bars and cafés, are what make it interesting. And the Green Light District is known for its greatconcerts, art galleries, and restaurants. Another place you must check out is Nyhavn—a waterfront district lined with brightly-colored, 17th-century townhouses, bars, cafés, and restaurants. Do visit the Rosenborg Castle for the Crown Jewels andsee the Changing of the Guard ceremony at the Christiansborg Palace. Lastly, Tarnet or The Tower offers an amazing view of the city and is free for all.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;img title='image--0062_112320050628.png' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--0062_112320050628.png' alt='image--0062_112320050628.png' width='343'  /&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Shenaz Treasury, Travel Influencer&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Do Try: “The Little Mermaid and Zinkglobal are two iconic sculptures in the city that you can’t miss to visit. A picture thereis a must. Also, the Danes are known for their stylish, minimalist home products— something you should definitely bring back.”&lt;/p&gt;&lt;p&gt;&lt;img title='image--0022_112320050817.png' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--0022_112320050817.png' alt='image--0022_112320050817.png' width='408'  /&gt;&lt;/p&gt;&lt;p&gt;&lt;img title='image--0082_112320050848.png' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--0082_112320050848.png' alt='image--0082_112320050848.png' width='391'  /&gt;&lt;/p&gt;&lt;p&gt;My Tip: “Take a boat and explore this city on water—the sights are breathtaking. Also, Copenhagen is cafe heaven.Cafe Livingstone tops my list...it’s minimal, yet very stylish. If you can manage to get a reservation at Noma, a two-Michelin-star restaurant, that’s great! Copengahen is the birthplace of LEGO, and a walk through their store on København is a visual delight.&lt;/p&gt;&lt;p&gt;&lt;img title='image--0072_112320050940.png' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--0072_112320050940.png' alt='image--0072_112320050940.png' width='448'  /&gt;&lt;/p&gt;&lt;p&gt;A building in the Christiania district.&lt;/p&gt;",
-              "amp_fulltext": "&lt;p&gt;&lt;/p&gt;&lt;p&gt;&ldquo;I visited the Nordic city recently, and absolutely loved its vibe. Apart from getting my fill of Danish pastries, I explored areas like Freetown Christiania&mdash;a district that has its own rules, completely independent of the Danish government. Established in the &rsquo;70s by a group of hippies, it&rsquo;s the polar opposite of what Copenhagen is known for. Christiania&rsquo;s graffiti painted walls, and cobblestone alleys with cozy bars and caf&eacute;s, are what make it interesting. And the Green Light District is known for its greatconcerts, art galleries, and restaurants. Another place you must check out&amp;nbsp;is Nyhavn&mdash;a waterfront district lined with brightly-colored, 17th-century&amp;nbsp;townhouses, bars, caf&eacute;s, and restaurants. Do visit the Rosenborg Castle for the Crown Jewels andsee the Changing of the Guard ceremony at the Christiansborg Palace. Lastly, Tarnet or The Tower offers an amazing view of the city and is free for all.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--0062_112320050628.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Shenaz Treasury, Travel Influencer&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Do Try: &ldquo;The Little Mermaid and Zinkglobal are two iconic sculptures in the city that you can&rsquo;t miss to visit. A picture thereis a must. Also, the Danes are known for their stylish, minimalist home products&mdash; something you should definitely bring back.&rdquo;&lt;/p&gt;&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--0022_112320050817.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--0082_112320050848.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;&lt;p&gt;My Tip: &ldquo;Take a boat and explore this city on water&mdash;the sights are breathtaking. Also, Copenhagen is cafe heaven.Cafe Livingstone tops my list...it&rsquo;s minimal, yet very stylish. If you can manage to get a reservation at Noma, a two-Michelin-star restaurant, that&rsquo;s great! Copengahen is the birthplace of LEGO, and a walk through their store on K&oslash;benhavn is a visual delight.&lt;/p&gt;&lt;p&gt;&lt;amp-img src=&quot;https://akm-img-a-in.tosshub.com/sites/gloss99/resources/embed/202011/image--0072_112320050940.png&quot; alt=&quot;&quot; height=&quot;425&quot; width=&quot;650&quot; layout=&quot;responsive&quot; heights=&quot;(min-width:500px) 200px, 80%&quot;&gt;&lt;/amp-img&gt;&lt;/p&gt;&lt;p&gt;A building in the Christiania district.&lt;/p&gt;",
-              "category_trail": [
-                {
-                  "id": 4,
-                  "title": "Travel & Food",
-                  "slug": "travel-food",
-                  "parent": "0"
-                }
-              ],
-              "primary_section_id": 4,
-              "primary_section_name": "Travel & Food",
-              "primary_section_slug": "travel-food",
-              "primary_id": "4",
-              "primary_id_name": "Travel & Food",
-              "primary_id_slug": "travel-food",
-              "url": "/travel-food/story/travel-diaries-copenhagen-denmark-by-shenaz-treasury-1948",
-              "full_url": "https://dev-harperbazar.intoday.in/travel-food/story/travel-diaries-copenhagen-denmark-by-shenaz-treasury-1948",
-              "amp_full_url": "https://dev-harperbazar.intoday.in/amp/travel-food/story/travel-diaries-copenhagen-denmark-by-shenaz-treasury-1948",
-              "slug": "travel-diaries-copenhagen-denmark-by-shenaz-treasury",
-              "excerpt": "&lt;p&gt;'Christiania’s graffiti- painted walls, and cobblestone alleys with cosy bars and cafés, are what make it interesting.”&lt;/p&gt;",
-              "publish_up": "2020-11-23 17:11:36",
-              "publish_down": "0000-00-00 00:00:00",
-              "metatitle": "Discover Copenhagen With Travel Influencer Shenaz Treasury",
-              "metadesc": "&lt;p&gt;'Christiania’s graffiti- painted walls, and cobblestone alleys with cosy bars and cafés, are what make it interesting.”&lt;/p&gt;",
-              "metakey": "",
-              "highlights": "",
-              "rating": "",
-              "review_title": "",
-              "review_image_data": "https://akm-img-a-in.tosshub.com/sites/harpers-bazaar/resources/images/default_454x255.png",
-              "review_pros": "",
-              "review_cons": "",
-              "feature_image": "https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/shenaz1_251120042531_1199x675.jpg",
-              "feature_image_data": {
-                "url": "https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/shenaz1_251120042531_1199x675.jpg",
-                "title": "shenaz1_251120042531_1199x675",
+                "url": "https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/beauty301120055703.jpeg",
+                "title": "beauty301120055703",
                 "caption": "",
                 "alt_text": "",
                 "description": ""
@@ -785,43 +700,34 @@ export default function SearchContent(){
                   "authors_id": "1",
                   "author_name": "Bazaar India",
                   "author_slug": "bazaar-india",
-                  "author_image": [
-                    {
-                      "file_path": "https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/priyanka_251120033723_1099x675.jpeg",
-                      "extra": {
-                        "text": "priyanka_251120033723_1099x675",
-                        "caption": "",
-                        "alt_text": "",
-                        "description": ""
-                      }
-                    }
-                  ]
+                  "author_image": ""
                 }
               ],
               "section_data": "",
-              "created_at": "2020-11-23T11:41:36.000000Z",
+              "created_at": "2020-11-27T09:34:03.000000Z",
               "created_by_id": "13",
               "created_by_name": "prachi goyal",
-              "cache_time": "05/05/2021 02:24:23 pm",
-              "updated_at": "2021-04-16 11:36:41",
+              "cache_time": "06/05/2021 12:20:30 pm",
+              "updated_at": "2020-12-04 17:21:22",
               "galleries": "",
               "video_node": "",
-              "previous_url_id": "1947"
+              "previous_url_id": "1952"
             }
           ],
           "other_information": {
-            "total_no_of_records": 5,
-            "display_records": 2,
-            "cache_time": "05/05/2021 02:24:23 pm"
-          }
+            "total_no_of_records": "1"
+          },
+          "related_stories": [
+            ""
+          ]
         }
       }
    return(
-       <> 
-        <Head>
+       <>  
+       <Head>
         {/* <title>Fashion News: Latest Fashion</title> */}
         <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
-    </Head> 
+    </Head>
        <div className="add_wrapper">
        <div id="div-gpt-ad-6326067-1">
                 <GPT
@@ -833,10 +739,8 @@ export default function SearchContent(){
         <div className="nevigation_section">
                 <div className="container">
                     <a href="www.facebook.com" className="active">Home  </a>
-                    <span> <img src={backArrowImg} alt="back1" /></span>
-                    <a href="www.facebook.com">Search</a>
-                    <span> <img src={backArrowImg} alt="back2" /></span>
-                    <a href="www.facebook.com">{router.query.searchInput}</a>
+                    <span> <img src={backArrowImg} alt="back" /></span>
+                    <a href="www.facebook.com">{storyData.data.feed[0].primary_section_name}</a>
                 </div>
             </div>
 
@@ -844,50 +748,32 @@ export default function SearchContent(){
             <section className="content_wrapper">
                 <div className="container">
                     <div className="content_inner">
-                         <div className="content_left">
-                             <slot>
-
-   {/* top heading */}
-   <div className="author_head">
-        <h2>{searchContentData.data.feed.length} Results for {router.query.searchInput}</h2>
-        <div className="update_tab">
-            <a href="www.facebook.com">Oldest</a>
-            <a href="www.facebook.com" className="active">Newest</a>
-        </div>
-        </div>
-        {/* end */}
-
-        {/* CelebrityList */}
-        <div>
-        <ul className="author_list">
-            {
-                searchContentData.data.feed.map((data)=>{
-                    return(
-                        <li>
-                        <div className="clearfix">
-                        <figure>
-                            <img src={data.feature_image_data.url} alt="list_img1"/>
-                        </figure>
-                        <div className="author_detail">
-                            <span>{moment(data.updated_at).format("MMM DD, YYYY")}</span>
-                                <p>{data.headline}</p>
+                        <div className="content_left">
+                            <h1>{storyData.data.feed[0].headline}</h1>
+                            <span className="heading_sub">{storyData.data.feed[0].introtext}</span>
+                            <div className="user_profile">
+                            <figure>
+                                <img src="https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202104/author-icon160421113925.png" alt="" />
+                            </figure>
+                                <i>{moment(storyData.data.feed[0].updated_at).format("MMM DD, YYYY")} | by <Link href="/author/bazaar-india/">{storyData.data.feed[0].author_data[0].author_name}</Link>  </i>
                             </div>
-                            </div>
-                    </li> 
-                    )
-                })
-            }
 
-        </ul>
-    </div>
-    {/* end */}
-
-
-
-                             </slot>
-                          </div>
-                         <div className="content_right">
-                                <figure className="add_box">
+							<figure className="story_one">
+                                    <img src={storyData.data.feed[0].feature_image_data.url} alt="story_img" />
+                            </figure>
+				<p></p>
+                {/* <div dangerouslySetInnerHTML={{__html:storyData.data.feed[0].fulltext}}></div> */}
+                {/* <div dangerouslySetInnerHTML={createMarkup()}></div> */}
+                {/* <div>{ ReactHtmlParser(storyData.data.feed[0].fulltext) }</div> */}
+                <div>
+                {parse(`<p><strong><u>Samyukta Nair, Food and Fashion Entrepreneur</u></strong></p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-006271120025708.png' /></p> <p>&ldquo;Embracing my curls during this time has been a game-changer for me, and I have been enjoying them courtesy Curlsmith&rsquo;s Curl Quenching Conditioning Wash and their Oil-In-Cream. I&rsquo;ve also made a conscious effort to change my night-time skincare routine with a weekly deep cleanse and exfoliation, using the Forest Essentials Multani Mitti Ubtan mixed with their Aloevera Juice. I call it a night with a thin layer of their Ojas Illuminating Night Beauty Balm.&rdquo;</p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-014271120025900.png' /><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-016271120025944.png' width='70' /><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-032271120030016.png' width='140' /></p> <p>Forest Essentials Aloevera Juice, Rs.575</p> <p>Curlsmith Curl Quenching Conditioning Wash and Oil-In- Cream,&nbsp; Rs.2,000 (approx),</p> <p>Ojas Illuminating Night Beauty Balm, Rs.3,800.</p> <p><u><strong>Mallika Tarkas Parekh, Founder and Director of AMP Fitness, LLP, Exclusive Licensee of Physique 57 in India</strong></u></p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-005271120030127.png' width='232' /></p> <p>&nbsp;</p> <p>&ldquo;Honestly, it feels amazing to be able to give my make-up products a rest! The lockdown has been about exfoliation and hydration for me. My favourites include the SkinCeuticals C + AHA serum, which smells awful but really works for my skin, the SkinCeuticals Hydrating B5 Gel, and the Joanna Vargas Exfoliating Mask and Daily Hydrating Cream. If I&rsquo;m feeling fancy (even for Zoom meetings), I spritz on Jo Malone&rsquo;s Nectarine Blossom and Honey Cologne to brighten up my mood.&rdquo;</p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-020271120032417.png' width='183' /></p> <p>Skinceuticals Hydrating B5 Gel, Rs.6,100 (approx)</p> <p><u><strong>&nbsp;Karishma Manga Bedi, Entrepreneur</strong></u></p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-009271120032511.png' /></p> <p>&ldquo;I decided to use this time at home to do all the things I couldn&rsquo;t earlier, including learning to play the piano, reading, and making time for self-care. In addition to my regular beauty regime, I have started using the Forest Essentials Facial Ubtan (in Soundarya) as a face pack in the morning and I follow it up with their Facial Tonic Mist Hasayan Rose. At night, I use the Forest Essentials Ojas Glow Replenishing Night Beauty Balm and also massage my face with a rose quartz roller that has been kept in the fridge for at least an hour. The result is supple and plumped skin.&rdquo;</p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-017271120032640.png' /></p> <p>Forest Essentials Facial Tonic Mist Rosewater</p> <p><u><strong>Shaheen Abbas, Jewellery Designer</strong></u></p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-007271120032738.png' /></p> <p>&ldquo;During this lockdown, my focus has been on keeping my skin hydrated and exfoliated. I have been using Farmacy&rsquo;s Honeymoon Glow AHA Resurfacing Night Serum, mixed with The Inkey List&rsquo;s Hyaluronic Acid Serum two to three times a week&mdash;this combination really helps keep my skin looking fresh. During the day, I use SK-II&rsquo;s Facial Treatment Essence, followed by Drunk Elephant&rsquo;s C-Firma Day Serum (again mixed with hyaluronic acid). For overall hydration, I have been using Drunk Elephant&rsquo;s Protini Polypeptide Cream, which is fabulous! The Oats Cleansing Balm from The Inkey List has been my go-to, lately, because it keeps my skin clean without stripping off the natural oils. And when I feel like my skin needs an extra shot of hydration, I turn to Summer Fridays&rsquo; Jet Lag Mask.&rdquo;</p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-021271120033013.png' /><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-022271120033032.png' /><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-023271120033052.png' width='63' /></p> <p>Drunk Elephant Protini Polypeptide Cream, Rs.5,000 (approx),</p> <p>The Inkey List Hyaluronic Acid Serum, Rs. 590 (approx), Farmacy</p> <p>Honeymoon Glow, Rs.4,270 (approx).</p> <p><u><strong>Diva Dhawan, Model</strong></u></p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-012271120033228.png' /></p> <p>&ldquo;I have taken this time to really take care of my skin...keeping it clean and allowing it to breathe. I have opted for a super-minimal routine. The two products that I&rsquo;m using at the moment are Bioderma&rsquo;s moisturiser for dry skin and Bobbi Brown&rsquo;s Vitamin Enriched Eye Base. Oh, and when I feel like pampering my skin, I massage my face with a jade roller...mostly once a week.&rdquo;</p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-025271120033414.png' width='116' /><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-024271120033444.png' width='242' /></p> <p>Bioderma Atoderm Cr&egrave;me, Rs.599</p> <p><u><strong>Monica Dogra, Musician</strong></u></p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-010271120033530.png' width='275' /></p> <p>&ldquo;Over the past few months I haven&rsquo;t been able to visit my dermatologist or facialist. As a result, I have made a conscious shift in the products I use every day to ensure my skin is taken care of. Good skincare leads to great skin, and I have been using La Mer&rsquo;s The Deep Cleansing Foam, followed by a moisturiser by Peter Thomas Roth, which keeps my skin hydrated all day long. And yes, I religiously use an eye cream&mdash;the one by Clinique is excellent!&rdquo;</p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-029271120033648.png' width='85' /><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-030271120033713.png' /><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-028271120033740.png' /></p> <p>La Mer Deep The Cleansing Foam, Rs.6,750 (approx)</p> <p>Hydrating Moisturizer, Rs.3,800 (approx), Clinique<br /> Pep-Start Eye Cream, Rs.2,300.</p> <p>Peter Thomas Roth Water Drench Hyaluronic Cloud Cream</p> <p><u><strong>Shaleena Nathani, Celebrity Stylist</strong></u></p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-001271120033940.png' /></p> <p>&ldquo;The one thing that this pandemic has taught me, in terms of skincare, is consistency. I was extremely impatient earlier, and over the past few months, I have religiously followed a regime recommended by a derm, and it has really helped me. It&rsquo;s quite simple, actually: I start off with a foam cleanser and apply a serum mixed with a bit of retinol cream. Then, I top it up with a moisturiser. And I wear sunscreen all the time, even when I am indoors. These simple steps, and a little bit of patience, have transformed my skin.&rdquo;</p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-031271120034117.png' /></p> <p>Shangpree Spa Care System S-Energy Facial Mousse Cleanser, Rs.1,900</p> <p><strong><u>Richa Moorjani, Actor</u></strong></p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-000271120034205.png' /></p> <p>&ldquo;I love using clean, cruelty-free, great-smelling products. Throughout the lockdown, I&rsquo;ve been using Mario Badescu&rsquo;s Cleansing Enzyme Gel and Botanical Exfoliating Scrub to cleanse and exfoliate. I follow that with their Aloe, Chamomile and Lavender Facial Spray (which I also use throughout the day), and then apply Soma Ayurvedic&rsquo;s Vitamin C Serum, followed by their Lavender, Moringa, Avocado Under-Eye Gel. During the day, I always wear a moisturiser with SPF, like Mineral Fusion&rsquo;s SPF 40 Moisturizer; and at night, I slather on Soma Ayurvedic&rsquo;s Aloe Vera and Saffron Anti-Aging Cream.&rdquo;</p> <p><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-026271120034350.png' width='63' /><img alt='' src='https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202011/image-027271120034412.png' /></p> <p>Mario Badescu Facial Spray with Aloe, Chamomile and Lavender Facial, Rs.510 (approx)</p> <p>Mineral Fusion Mineral SPF 40 Face Moisturizer, Rs.1,840 (approx).</p> <p>&nbsp;</p>`)}
+                </div>
+               
+        </div>
+						
+        <div className="content_right">
+                {/* Small ADS */}
+                <figure className="add_box">
                                 <div id="div-gpt-ad-6326067-2">
                                 <GPT
                                     adUnitPath="/1007232/HarperBazaar_HP_300x250_MTF"
@@ -895,8 +781,10 @@ export default function SearchContent(){
                                 />
                                 </div>
                                 </figure>
-                            <h4>Must Read</h4>
-                            {
+
+            {/* rhs story */}
+            <h4>Must Read</h4>
+            {
                                 rhsData.data.feed.templatedata[0].content_data.widget_data.widget_data.main_data.map((data)=>{
                                     return(
                                         <div className="right_card">
@@ -907,11 +795,10 @@ export default function SearchContent(){
 
                                 })
                             }
-                            
-                         </div>
-                    </div>
-                </div>   
-   </section>
+			    </div>
+                </div>
+                </div>
+            </section>
    <div className="add_wrapper">
                 <div id="div-gpt-ad-6326067-3">
                     <GPT

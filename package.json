@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "html-react-parser": "^1.2.6",
     "infinite-react-carousel": "^1.2.11",
     "moment": "^2.29.1",
     "next": "10.1.3",

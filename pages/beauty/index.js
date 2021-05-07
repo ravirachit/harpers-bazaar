@@ -67,7 +67,7 @@ export default function Beauty({beautyData}){
             <h4>Must Read</h4>
             <div className="right_card">
                 <figure><img src={beautyData.data.feed[1].feature_image_data.url} alt="rhs_img" /></figure>
-                <p>{beautyData.data.feed[1].headline}</p>
+                <p><Link href={'/photo/3478'}>{beautyData.data.feed[1].headline}</Link></p>
             </div>
 			</div>
             </div>
@@ -78,9 +78,9 @@ export default function Beauty({beautyData}){
                         <li>
                         <div className="list_detail">
                             <strong>{moment(beauty.updated_at).format("MMM DD, YYYY")}</strong>
-                            <h3><a href={beauty.url}>{beauty.headline}</a></h3>
+                            <h3><Link href={'/story/1992'}>{beauty.headline}</Link></h3>
                             <p>{beauty.introtext}</p>
-                            <span>By <a href="/authors/bazaar-india">{beauty.author_data[0].author_name}</a></span>
+                            <Link href="/author/bazaar-india/"><span>By {beauty.author_data[0].author_name}</span></Link>
                         </div>
                         <figure className="list_pic">
                             <img src={beauty.feature_image_data.url} alt="list_img1"/>

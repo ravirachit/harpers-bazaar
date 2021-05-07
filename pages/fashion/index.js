@@ -67,7 +67,7 @@ export default function Fashion({fashionData}){
             <h4>Must Read</h4>
             <div className="right_card">
                 <figure><img src={fashionData.data.feed[1].feature_image_data.url} alt="rhs_img" /></figure>
-                <p>{fashionData.data.feed[1].headline}</p>
+                <p><Link href={'/photo/3478'}>{fashionData.data.feed[1].headline}</Link></p>
             </div>
 			</div>
             </div>
@@ -78,9 +78,9 @@ export default function Fashion({fashionData}){
                         <li>
                         <div className="list_detail">
                             <strong>{moment(fashion.updated_at).format("MMM DD, YYYY")}</strong>
-                            <h3><a href={fashion.url}>{fashion.headline}</a></h3>
+                            <h3><Link href={'/photo/3478'}>{fashion.headline}</Link></h3>
                             <p>{fashion.introtext}</p>
-                            <span>By <a href="/authors/bazaar-india">{fashion.author_data[0].author_name}</a></span>
+                            <Link href="/author/bazaar-india/"><span>By {fashion.author_data[0].author_name}</span></Link>
                         </div>
                         <figure className="list_pic">
                             <img src={fashion.feature_image_data.url} alt="list_img1"/>

@@ -51,7 +51,7 @@ export default function Home({homeData}){
                   <figure>
                           <img src={homeData.data.feed.templatedata[0].content_data.widget_data.widget_data.main_data[0].feature_image_data.url} alt="banner"/>
                   </figure>
-                  <h2>{homeData.data.feed.templatedata[0].content_data.widget_data.widget_data.main_data[0].headline}</h2>
+                  <h2><Link href={'/photo/3478'}>{homeData.data.feed.templatedata[0].content_data.widget_data.widget_data.main_data[0].headline}</Link></h2>
                   </div>
                   <div>
                   <figure>
@@ -74,7 +74,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[0].feature_image_data.url} alt="fashion1" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[0].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[0].headline}</Link>
                             </p>
                         </div>
                         <div className="fashion_cell">
@@ -82,7 +82,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[1].feature_image_data.url} alt="fashion1" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[1].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[1].headline}</Link>
                             </p>
                         </div>
                         <div className="fashion_cell">
@@ -90,7 +90,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[2].feature_image_data.url} alt="fashion1" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[2].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[2].headline}</Link>
                             </p>
                         </div>
                         <div className="fashion_cell">
@@ -107,7 +107,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[3].feature_image_data.url} alt="fashion1" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[3].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[3].headline}</Link>
                             </p>
                         </div>
                     </div>
@@ -125,7 +125,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[0].feature_image_data.url} alt="Beauty" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[0].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[0].headline}</Link>
                             </p>
                         </div>
                         <div className="travel_right">
@@ -135,7 +135,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[1].feature_image_data.url} alt="Beauty1" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[1].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[1].headline}</Link>
                             </p>
                                 </li>
                                 <li>
@@ -143,7 +143,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[2].feature_image_data.url} alt="Beauty2" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[2].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[2].headline}</Link>
                             </p>
                                 </li>
                                 <li>
@@ -151,7 +151,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[3].feature_image_data.url} alt="Beauty3" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[3].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[3].content_data.widget_data.widget_data.main_data[3].headline}</Link>
                             </p>
                                 </li>
                             </ul>
@@ -171,7 +171,7 @@ export default function Home({homeData}){
                             <img src={homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[0].feature_image_data.url} alt="culture" />
                             </div>
                             <div className="culture_text">
-                                <p>{homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[0].headline}</p>
+                                <p><Link href={'/story/1992'}>{homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[0].headline}</Link></p>
                             </div>
                         </div>
                         <div className="add_sec">
@@ -189,7 +189,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[1].feature_image_data.url} alt="culture1" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[1].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[1].headline}</Link>
                             </p>
                         </div>
                         <div className="culture_cell">
@@ -197,7 +197,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[2].feature_image_data.url} alt="culture2" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[2].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[2].headline}</Link>
                             </p>
                         </div>
                         <div className="culture_cell">
@@ -205,7 +205,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[3].feature_image_data.url} alt="culture3" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[3].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[4].content_data.widget_data.widget_data.main_data[3].headline}</Link>
                             </p>
                         </div>
                     </div>
@@ -223,7 +223,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[0].feature_image_data.url} alt="celebrity1" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[0].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[0].headline}</Link>
                             </p>
                         </div>
                         <div className="fashion_cell">
@@ -231,7 +231,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[1].feature_image_data.url} alt="celebrity2" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[1].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[1].headline}</Link>
                             </p>
                         </div>
                         <div className="fashion_cell">
@@ -239,7 +239,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[2].feature_image_data.url} alt="celebrity3" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[2].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[2].headline}</Link>
                             </p>
                         </div>
                         <div className="fashion_cell">
@@ -247,7 +247,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[3].feature_image_data.url} alt="celebrity4" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[3].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[5].content_data.widget_data.widget_data.main_data[3].headline}</Link>
                             </p>
                         </div>
                     </div>
@@ -265,7 +265,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[0].feature_image_data.url} alt="travelAndFood1" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[0].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[0].headline}</Link>
                             </p>
                         </div>
                         <div className="travel_right">
@@ -275,7 +275,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[1].feature_image_data.url} alt="travelAndFood2" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[1].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[1].headline}</Link>
                             </p>
                                 </li>
                                 <li>
@@ -283,7 +283,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[2].feature_image_data.url} alt="travelAndFood3" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[2].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[2].headline}</Link>
                             </p>
                                 </li>
                                 <li>
@@ -291,7 +291,7 @@ export default function Home({homeData}){
                                 <img src={homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[3].feature_image_data.url} alt="travelAndFood4" />
                             </figure>
                             <p>
-                                {homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[3].headline}
+                            <Link href={'/story/1992'}>{homeData.data.feed.templatedata[6].content_data.widget_data.widget_data.main_data[3].headline}</Link>
                             </p>
                                 </li>
                             </ul>

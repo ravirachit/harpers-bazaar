@@ -49,7 +49,7 @@ export default function Celebrity({celebrityData}){
                             <figure>
                             <img src={celebrityData.data.feed[0].feature_image_data.url} alt="celebrity_img_main" />
                             </figure>
-                            <h3>{celebrityData.data.feed[0].headline}</h3>
+                            <h3><Link href={'/story/1992'}>{celebrityData.data.feed[0].headline}</Link></h3>
                         </div> 
                         </div>	                                  	
             <div className="content_right">
@@ -67,7 +67,7 @@ export default function Celebrity({celebrityData}){
             <h4>Must Read</h4>
             <div className="right_card">
                 <figure><img src={celebrityData.data.feed[1].feature_image_data.url} alt="rhs_img" /></figure>
-                <p>{celebrityData.data.feed[1].headline}</p>
+                <p><Link href={'/story/1992'}>{celebrityData.data.feed[1].headline}</Link></p>
             </div>
 			</div>
             </div>
@@ -78,9 +78,9 @@ export default function Celebrity({celebrityData}){
                         <li>
                         <div className="list_detail">
                             <strong>{moment(celebrity.updated_at).format("MMM DD, YYYY")}</strong>
-                            <h3><a href={celebrity.url}>{celebrity.headline}</a></h3>
+                            <h3><Link href={'/story/1992'}>{celebrity.headline}</Link></h3>
                             <p>{celebrity.introtext}</p>
-                            <span>By <a href="/authors/bazaar-india">{celebrity.author_data[0].author_name}</a></span>
+                            <Link href="/author/bazaar-india/"><span>By {celebrity.author_data[0].author_name}</span></Link>
                         </div>
                         <figure className="list_pic">
                             <img src={celebrity.feature_image_data.url} alt="list_img1"/>

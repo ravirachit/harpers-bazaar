@@ -67,7 +67,7 @@ export default function Culture({cultureData}){
             <h4>Must Read</h4>
             <div className="right_card">
                 <figure><img src={cultureData.data.feed[1].feature_image_data.url} alt="rhs_img" /></figure>
-                <p>{cultureData.data.feed[1].headline}</p>
+                <p><Link href={'/story/1992'}>{cultureData.data.feed[1].headline}</Link></p>
             </div>
 			</div>
             </div>
@@ -78,9 +78,9 @@ export default function Culture({cultureData}){
                         <li>
                         <div className="list_detail">
                             <strong>{moment(culture.updated_at).format("MMM DD, YYYY")}</strong>
-                            <h3><a href={culture.url}>{culture.headline}</a></h3>
+                            <h3><Link href={'/story/1992'}>{culture.headline}</Link></h3>
                             <p>{culture.introtext}</p>
-                            <span>By <a href="/authors/bazaar-india">{culture.author_data[0].author_name}</a></span>
+                            <Link href="/author/bazaar-india/"><span>By {culture.author_data[0].author_name}</span></Link>
                         </div>
                         <figure className="list_pic">
                             <img src={culture.feature_image_data.url} alt="list_img1"/>
