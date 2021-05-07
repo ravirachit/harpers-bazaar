@@ -1,36 +1,20 @@
 import React, { Component } from 'react';
-import { Gpt } from 'react-gpt-ads';
-import Head from 'next/head';
+import Ad from 'react-google-publisher-tag';
 
-export default function Photo(){
-    return(
+export default class Example extends Component {
+  render() {
+    return (
         <>
-         <Head>
-        {/* <title>Fashion News: Latest Fashion</title> */}
-        <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
-    </Head>
-        <div>Photo is working</div>
-        <Gpt 
-        adUnit="/1007232/HarperBazaar_HP_300x250-728x90_ATF"
-        name="ad-name"
-        size={[300, 250]}
-    />
-    </>
-    )
+      <div id="div-gpt-ad-6326067-1">
+        <Ad path="/1007232/HarperBazaar_HP_300x250-728x90_ATF" />
+        {/* <RouteHandler /> */}
+      </div>
+       <div id="div-gpt-ad-6326067-2">
+       <Ad path="/1007232/HarperBazaar_HP_300x250_MTF" />
+       {/* <RouteHandler /> */}
+     </div>
+     </>
+    );
+  }
 }
-
-
-// import React, { Component } from 'react';
-// import Ad from 'react-google-publisher-tag';
-
-// export default class Photo extends Component {
-//   render() {
-//     return (
-//       <div id="application">
-//         <Ad path="/network-code/ad-code" />
-//         <RouteHandler />
-//       </div>
-//     );
-//   }
-// }
 

@@ -1723,8 +1723,8 @@ export default function AuthorContent(){
    return(
        <> 
         <Head>
-        {/* <title>Fashion News: Latest Fashion</title> */}
-        <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+        <title>Author News: Author Details</title>
+        {/* <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script> */}
     </Head> 
        <div className="add_wrapper">
        <div id="div-gpt-ad-6326067-1">

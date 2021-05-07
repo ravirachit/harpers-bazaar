@@ -15,7 +15,7 @@ export default function Beauty({beautyData}){
     <>
     <Head>
         <title>Beauty Tips: Latest Beauty tips</title>
-        <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+        {/* <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script> */}
     </Head>
     {/* ads section */}
     <div className="add_wrapper">

@@ -31,7 +31,7 @@ export default function Home({homeData}){
        <>
         <Head>
         <title>Lifestyle News: Latest Lifestyle</title>
-        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+        {/* <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script> */}
       </Head>
             {/* Add Section */}
          <div className="add_wrapper">

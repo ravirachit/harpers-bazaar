@@ -15,7 +15,7 @@ export default function Celebrity({celebrityData}){
     <>
     <Head>
         <title>Celebrity News: Latest Celebrity</title>
-        <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+        {/* <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script> */}
     </Head>
     {/* ads section */}
     <div className="add_wrapper">

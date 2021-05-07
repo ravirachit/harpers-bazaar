@@ -15,7 +15,7 @@ export default function Culture({cultureData}){
     <>
     <Head>
         <title>Culture News: Latest culture</title>
-        <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+        {/* <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script> */}
     </Head>
     {/* ads section */}
     <div className="add_wrapper">
