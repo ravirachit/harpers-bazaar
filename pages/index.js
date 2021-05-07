@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 GPT.enableSingleRequest();
-
 // Images
 // const banner_img = './assets/images/banner.png';
 const add_img = './assets/images/add.png';
@@ -96,12 +95,12 @@ export default function Home({homeData}){
                         <div className="fashion_cell">
                             <figure className="add_fashion">
                                 {/* <img src={FashionAdd} alt="fashionadd" /> */}
-                                <div id="div-gpt-ad-6326067-2">
+                                {/* <div id="div-gpt-ad-6326067-2">
                                 <GPT
                                     adUnitPath="/1007232/HarperBazaar_HP_300x250_MTF"
                                     slotSize={[300, 250]}
                                 />
-                                </div>
+                                </div> */}
                             </figure>
                             <figure>
                                 <img src={homeData.data.feed.templatedata[2].content_data.widget_data.widget_data.main_data[3].feature_image_data.url} alt="fashion1" />
@@ -175,12 +174,12 @@ export default function Home({homeData}){
                             </div>
                         </div>
                         <div className="add_sec">
-                        <div id="div-gpt-ad-6326067-2">
+                        {/* <div id="div-gpt-ad-6326067-2">
                 <GPT
                     adUnitPath="/1007232/HarperBazaar_HP_300x250_MTF"
                     slotSize={[300, 250]}
                 />
-            </div>
+            </div> */}
                         </div>
                     </div>
                     <div className="culture_list">
@@ -301,12 +300,12 @@ export default function Home({homeData}){
             </section>
 
             <div className="add_wrapper">
-                <div id="div-gpt-ad-6326067-3">
+                {/* <div id="div-gpt-ad-6326067-3">
                     <GPT
                         adUnitPath="/1007232/HarperBazaar_HP_728x90-300x250_BTF"
                         slotSize={[800, 450]}
                     />
-                </div>
+                </div> */}
         </div>
 
             </>
