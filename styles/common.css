@@ -211,7 +211,8 @@ figure img {
     padding:0 5px 20px;
     margin:0 0 12px;
     display:inline-block;
-    border-bottom:1px solid #ddd
+    border-bottom:1px solid #ddd;
+    cursor: pointer;
    }
    .footer_follow_us a,
    .footer_follow_us label {
@@ -757,6 +758,7 @@ figure img {
     margin-right: 36px;
     margin-top: 8px;
     display: none;
+    cursor: pointer;
 }
 .fixed {
     width: 100%;

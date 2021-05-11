@@ -77,9 +77,9 @@ export default function Header(){
                 </div>
                 <div id="fixedNav" className={isActive ? 'fixed' : 'bottomheader'}>
                     <div className="container relative flex_wrap">
-                    <a href="https://harpers-bazaar.vercel.app/" className="strickylogo">
+                    <a className="strickylogo"><Link href="/">
                         <img src={strickyLogo} alt="strickylogo" />
-                    </a>
+                    </Link></a>
                     <nav className="menu">
                         <Link href="/"><a className={router.pathname === "/" ? "activeNavMenu" : ""}>HOME</a></Link>
                         <Link href="/fashion" ><a className={router.pathname === "/fashion" ? "activeNavMenu" : ""}>FASHION</a></Link>

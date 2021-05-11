@@ -72,9 +72,11 @@ export default function Footer(){
                     </div>
                 </div>
                 <div className="footer_logo_right">
-                    <a href="www.facebook.com" className="footer_logo">
+                    <Link href="/">
+                        <span className="footer_logo">
                         <img src={footer_img} alt="footerlogo" />
-                    </a>
+                        </span>
+                    </Link>
                     <div className="footer_follow_us">
                         <label>
                             Follow us on: 
