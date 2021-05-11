@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 // Images
 const footer_img = '../assets/images/footerlogo.png';
@@ -15,22 +16,22 @@ export default function Footer(){
                     <h4>QUICK LINKS</h4>
                     <ul className="footer_menu">
                         <li>
-                            <a href="https://harpers-bazaar.vercel.app/">Home</a>
+                            <Link  href="/">Home</Link>
                         </li>
                         <li>
-                            <a href="www.facebook.com">Culture</a>
+                            <Link href="/culture">Culture</Link>
                         </li>
                         <li>
-                            <a href="www.facebook.com">Fashion</a>
+                            <Link href="/fashion">Fashion</Link>
                         </li>
                         <li>
-                            <a href="www.facebook.com">Celebrity</a>
+                            <Link href="/celebrity">Celebrity</Link>
                         </li>
                         <li>
-                            <a href="www.facebook.com">Beauty</a>
+                            <Link href="/beauty">Beauty</Link>
                         </li>
                         <li>
-                            <a href="www.facebook.com">Travel &amp; Food</a>
+                            <Link href="/travelAndFood">Travel &amp; Food</Link>
                         </li>
                     </ul>
                 </div>

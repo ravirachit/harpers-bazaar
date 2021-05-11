@@ -56,7 +56,7 @@ export default function Header(){
             <header id="header">
                 <div className="upperheader">
                     <div className="container relative" >
-                        <Link href="https://harpers-bazaar.vercel.app/" >
+                        <Link  href="/" >
                             <img src={logo} alt="logo" />
                         </Link>
                         <div className="follow_us">
@@ -127,7 +127,7 @@ export default function Header(){
                 <span className="menu_icon"  onClick={()=>setMobMenu(true)}>
                     <img src={menu_img} alt="menu" />
                 </span>
-                <Link href="https://harpers-bazaar.vercel.app/" className="logo Link">
+                <Link href="/" className="logo Link">
                     <img src={logo} alt="logo" />
                 </Link>
                 <span className="searchicon" onClick={()=>setSearch(true)}>
