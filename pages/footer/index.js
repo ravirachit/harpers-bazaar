@@ -15,7 +15,7 @@ export default function Footer(){
                     <h4>QUICK LINKS</h4>
                     <ul className="footer_menu">
                         <li>
-                            <a href="www.facebook.com">Home</a>
+                            <a href="https://harpers-bazaar.vercel.app/">Home</a>
                         </li>
                         <li>
                             <a href="www.facebook.com">Culture</a>
@@ -78,13 +78,13 @@ export default function Footer(){
                         <label>
                             Follow us on: 
                          </label>
-                        <a href="www.facebook.com" className="">
+                        <a href="https://www.facebook.com/">
                             <img src={fb_img} alt="facebook" />
                         </a>
-                        <a href="www.facebook.com" className="">
+                        <a href="https://www.instagram.com/" className="">
                             <img src={instra_img} alt="instagram" />
                         </a>
-                        <a href="www.facebook.com" className="">
+                        <a href="https://twitter.com/">
                             <img src={twitter_img} alt="tiwtter" />
                         </a>
                     </div>

@@ -56,30 +56,30 @@ export default function Header(){
             <header id="header">
                 <div className="upperheader">
                     <div className="container relative" >
-                        <Link href="https://harpers-bazaar.vercel.app/">
+                        <Link href="https://harpers-bazaar.vercel.app/" >
                             <img src={logo} alt="logo" />
                         </Link>
                         <div className="follow_us">
                             <label>
                                 Follow us on:
                          </label>
-                            <Link href="https://www.facebook.com/">
+                            <a href="https://www.facebook.com/" >
                                 <img src={fb_img} alt="social_image" />
-                            </Link>
-                            <Link href="https://www.instagram.com/">
+                            </a>
+                            <a href="https://www.instagram.com/" >
                                 <img src={instra_img} alt="social_image" />
-                            </Link>
-                            <Link href="https://twitter.com/">
+                            </a>
+                            <a href="https://twitter.com/" >
                                 <img src={twitter_img} alt="social_image" />
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div id="fixedNav" className={isActive ? 'fixed' : 'bottomheader'}>
                     <div className="container relative flex_wrap">
-                    <Link href="https://harpers-bazaar.vercel.app/" className="strickylogo">
-                        <img src={strickyLogo} alt="stickyLogo" />
-                    </Link>
+                    <a href="https://harpers-bazaar.vercel.app/" className="strickylogo">
+                        <img src={strickyLogo} alt="strickylogo" />
+                    </a>
                     <nav className="menu">
                         <Link href="/"><a className={router.pathname === "/" ? "activeNavMenu" : ""}>HOME</a></Link>
                         <Link href="/fashion" ><a className={router.pathname === "/fashion" ? "activeNavMenu" : ""}>FASHION</a></Link>
@@ -101,9 +101,9 @@ export default function Header(){
         isMobMenu?<div className="humburger_overlay">
             <div className="menu_wrapper">
                 <div className="mobile_header_top">
-                    <Link href="https://harpers-bazaar.vercel.app/" className="mobile_logo">
+                    <a href="https://harpers-bazaar.vercel.app/" className="mobile_logo">
                         <img src={mobilelogo} alt="mobilelogo" />
-                    </Link>
+                    </a>
                     <span className="cross_menu" onClick={()=>setMobMenu(false)}>
                         <img src={cross} alt="crossIcon" />
                     </span>
@@ -127,7 +127,7 @@ export default function Header(){
                 <span className="menu_icon"  onClick={()=>setMobMenu(true)}>
                     <img src={menu_img} alt="menu" />
                 </span>
-                <Link href="https://harpers-bazaar.vercel.app/" className="logo">
+                <Link href="https://harpers-bazaar.vercel.app/" className="logo Link">
                     <img src={logo} alt="logo" />
                 </Link>
                 <span className="searchicon" onClick={()=>setSearch(true)}>

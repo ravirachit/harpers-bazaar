@@ -166,6 +166,9 @@ figure img {
 .list_detail span{
     cursor: pointer;
 }
+.upperheader img{
+    cursor: pointer;
+}
 
 
 @media only screen and (max-width:767px){
