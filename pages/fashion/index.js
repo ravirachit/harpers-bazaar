@@ -6,16 +6,12 @@ import {Bling as GPT} from "react-gpt";
 
 GPT.enableSingleRequest();
 // Images
-const Ads = './assets/images/add.png';
-const short_Ads = './assets/images/300x250.png';
 const backArrowImg = './assets/images/backarrow.png';
-
 export default function Fashion({fashionData}){
    return(
     <>
     <Head>
         <title>Fashion News: Latest Fashion</title>
-        {/* <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script> */}
     </Head>
     {/* ads section */}
     <div className="add_wrapper">
@@ -104,7 +100,7 @@ export default function Fashion({fashionData}){
    )
 }
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
     // const res = await fetch(`http://alpha-cms-chub-harperbazar.simpleapi.itgd.in/feeds/v3c/latest?section=fashion&section_level=0content_type=all&page=1&limit=10&order_by=publish_up%20desc&app=all`)
     const fashionData = {"data": {
         "feed": [
