@@ -277,6 +277,9 @@ figure img {
    .our_site .footer_menu li {
     width:100%
    }
+   .container img{
+       cursor: pointer;
+   }
    @media only screen and (max-width:1291px) {
     .quick_menu {
      margin-left:30px

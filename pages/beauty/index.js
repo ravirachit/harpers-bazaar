@@ -45,7 +45,7 @@ export default function Beauty({beautyData}){
                         {/* Fashion */}     
                         <div className="fashion_top">
                             <figure>
-                            <img src={beautyData.data.feed[0].feature_image_data.url} alt="fashion_img_main" />
+                            <Link href={'/story/'+beautyData.data.feed[0].url.slice(beautyData.data.feed[0].url.length - 4)}><img src={beautyData.data.feed[0].feature_image_data.url} alt="fashion_img_main" /></Link>
                             </figure>
                             <Link href={'/story/'+beautyData.data.feed[0].url.slice(beautyData.data.feed[0].url.length - 4)}><h3>{beautyData.data.feed[0].headline}</h3></Link>
                         </div> 
@@ -64,7 +64,7 @@ export default function Beauty({beautyData}){
             {/* rhs story */}
             <h4>Must Read</h4>
             <div className="right_card">
-                <figure><img src={beautyData.data.feed[1].feature_image_data.url} alt="rhs_img" /></figure>
+                <figure><Link href={'/photo/3478'}><img src={beautyData.data.feed[1].feature_image_data.url} alt="rhs_img" /></Link></figure>
                 <p><Link href={'/photo/3478'}>{beautyData.data.feed[1].headline}</Link></p>
             </div>
 			</div>
@@ -81,7 +81,7 @@ export default function Beauty({beautyData}){
                             <Link href="/author/bazaar-india/"><span>By {beauty.author_data[0].author_name}</span></Link>
                         </div>
                         <figure className="list_pic">
-                            <img src={beauty.feature_image_data.url} alt="list_img1"/>
+                        <Link href={'/story/1992'}><img src={beauty.feature_image_data.url} alt="list_img1"/></Link>
                         </figure>
                     </li> 
                     )

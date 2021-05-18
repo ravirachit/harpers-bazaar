@@ -47,7 +47,7 @@ export default function Celebrity({celebrityData}){
                         {/* celebrity */}     
                         <div className="fashion_top">
                             <figure>
-                            <img src={celebrityData.data.feed[0].feature_image_data.url} alt="celebrity_img_main" />
+                            <Link href={'/story/1992'}><img src={celebrityData.data.feed[0].feature_image_data.url} alt="celebrity_img_main" /></Link>
                             </figure>
                             <h3><Link href={'/story/1992'}>{celebrityData.data.feed[0].headline}</Link></h3>
                         </div> 
@@ -66,7 +66,7 @@ export default function Celebrity({celebrityData}){
             {/* rhs story */}
             <h4>Must Read</h4>
             <div className="right_card">
-                <figure><img src={celebrityData.data.feed[1].feature_image_data.url} alt="rhs_img" /></figure>
+                <figure><Link href={'/story/1992'}><img src={celebrityData.data.feed[1].feature_image_data.url} alt="rhs_img" /></Link></figure>
                 <p><Link href={'/story/1992'}>{celebrityData.data.feed[1].headline}</Link></p>
             </div>
 			</div>
@@ -83,7 +83,7 @@ export default function Celebrity({celebrityData}){
                             <Link href="/author/bazaar-india/"><span>By {celebrity.author_data[0].author_name}</span></Link>
                         </div>
                         <figure className="list_pic">
-                            <img src={celebrity.feature_image_data.url} alt="list_img1"/>
+                        <Link href={'/story/1992'}><img src={celebrity.feature_image_data.url} alt="list_img1"/></Link>
                         </figure>
                     </li> 
                     )

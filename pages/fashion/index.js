@@ -43,7 +43,7 @@ export default function Fashion({fashionData}){
                         {/* Fashion */}     
                         <div className="fashion_top">
                             <figure>
-                            <img src={fashionData.data.feed[0].feature_image_data.url} alt="fashion_img_main" />
+                            <Link href={'/story/'+fashionData.data.feed[0].url.slice(fashionData.data.feed[0].url.length - 4)}><img src={fashionData.data.feed[0].feature_image_data.url} alt="fashion_img_main" /></Link>
                             </figure>
                             <Link href={'/story/'+fashionData.data.feed[0].url.slice(fashionData.data.feed[0].url.length - 4)}><h3>{fashionData.data.feed[0].headline}</h3></Link>
                         </div> 
@@ -62,7 +62,7 @@ export default function Fashion({fashionData}){
             {/* rhs story */}
             <h4>Must Read</h4>
             <div className="right_card">
-                <figure><img src={fashionData.data.feed[1].feature_image_data.url} alt="rhs_img" /></figure>
+                <figure><Link href={'/photo/3478'}><img src={fashionData.data.feed[1].feature_image_data.url} alt="rhs_img" /></Link></figure>
                 <p><Link href={'/photo/3478'}>{fashionData.data.feed[1].headline}</Link></p>
             </div>
 			</div>
@@ -79,7 +79,7 @@ export default function Fashion({fashionData}){
                             <Link href="/author/bazaar-india/"><span>By {fashion.author_data[0].author_name}</span></Link>
                         </div>
                         <figure className="list_pic">
-                            <img src={fashion.feature_image_data.url} alt="list_img1"/>
+                        <Link href={'/photo/3478'}><img src={fashion.feature_image_data.url} alt="list_img1"/></Link>
                         </figure>
                     </li> 
                     )

@@ -6,8 +6,6 @@ import {Bling as GPT} from "react-gpt";
 
 GPT.enableSingleRequest();
 // Images
-const Ads = './assets/images/add.png';
-const short_Ads = './assets/images/300x250.png';
 const backArrowImg = './assets/images/backarrow.png';
 
 export default function TravelAndFood({travelAndFoodData}){
@@ -47,7 +45,7 @@ export default function TravelAndFood({travelAndFoodData}){
                         {/* Fashion */}     
                         <div className="fashion_top">
                             <figure>
-                            <img src={travelAndFoodData.data.feed[0].feature_image_data.url} alt="fashion_img_main" />
+                            <Link href={'/story/'+travelAndFoodData.data.feed[0].url.slice(travelAndFoodData.data.feed[0].url.length - 4)}><img src={travelAndFoodData.data.feed[0].feature_image_data.url} alt="fashion_img_main" /></Link>
                             </figure>
                             <Link href={'/story/'+travelAndFoodData.data.feed[0].url.slice(travelAndFoodData.data.feed[0].url.length - 4)}><h3>{travelAndFoodData.data.feed[0].headline}</h3></Link>
                         </div> 
@@ -66,7 +64,7 @@ export default function TravelAndFood({travelAndFoodData}){
             {/* rhs story */}
             <h4>Must Read</h4>
             <div className="right_card">
-                <figure><img src={travelAndFoodData.data.feed[1].feature_image_data.url} alt="rhs_img" /></figure>
+                <figure><Link href={'/story/1992'}><img src={travelAndFoodData.data.feed[1].feature_image_data.url} alt="rhs_img" /></Link></figure>
                 <p><Link href={'/story/1992'}>{travelAndFoodData.data.feed[1].headline}</Link></p>
             </div>
 			</div>
@@ -83,7 +81,7 @@ export default function TravelAndFood({travelAndFoodData}){
                             <Link href="/author/bazaar-india/"><span>By {travelAndFood.author_data[0].author_name}</span></Link>
                         </div>
                         <figure className="list_pic">
-                            <img src={travelAndFood.feature_image_data.url} alt="list_img1"/>
+                        <Link href={'/story/1992'}><img src={travelAndFood.feature_image_data.url} alt="list_img1"/></Link>
                         </figure>
                     </li> 
                     )
