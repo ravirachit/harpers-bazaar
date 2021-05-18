@@ -665,7 +665,7 @@ export default function PhotoContent() {
                             <span className="heading_sub">We invited some of the country’s best designers to share their interpretation of the universal symbol of safety</span>
                             <div className="user_profile">
                                 <figure>
-                                    <img src="https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202104/author-icon160421113925.png" alt="" />
+                                    <img className="authorIcon" src="https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202104/author-icon160421113925.png" alt="" />
                                 </figure>
                                 <i>Nov 23, 2020 | by <a href="/authors/bazaar-india">Bazaar India</a>  </i>
                             </div>

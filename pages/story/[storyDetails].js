@@ -753,7 +753,7 @@ export default function StoryContent(){
                             <span className="heading_sub">{storyData.data.feed[0].introtext}</span>
                             <div className="user_profile">
                             <figure>
-                                <img src="https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202104/author-icon160421113925.png" alt="" />
+                                <img  className="authorIcon" src="https://akm-img-a-in.tosshub.com/sites/gloss99/resources/202104/author-icon160421113925.png" alt="" />
                             </figure>
                                 <i>{moment(storyData.data.feed[0].updated_at).format("MMM DD, YYYY")} | by <Link href="/author/bazaar-india/">{storyData.data.feed[0].author_data[0].author_name}</Link>  </i>
                             </div>

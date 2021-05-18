@@ -128,7 +128,7 @@ export default function Header(){
                     <img src={menu_img} alt="menu" />
                 </span>
                 <Link href="/" className="logo Link">
-                    <img src={logo} alt="logo" />
+                    <img src={strickyLogo} alt="strickyLogo" />
                 </Link>
                 <span className="searchicon" onClick={()=>setSearch(true)}>
                     <img className="searchImg" src={serach_img} alt="search"/>
